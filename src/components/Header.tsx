@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderContainer from '../styled-components/HeaderContainer'
+import HeaderContainer from '../styled-components/containers/HeaderContainer.styled'
 import { hamburger, logo, cart } from '../assets'
 export default function Header() {
   return (
