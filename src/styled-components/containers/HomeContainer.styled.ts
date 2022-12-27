@@ -4,11 +4,11 @@ import { homeMainMobile } from "../../assets";
 const HomeContainer = styled.main`
   .section1 {
     width: 100%;
-    height: 700px;
+    height: 600px;
     background-image: url(${homeMainMobile}),
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* black with 50% opacity */
     background-blend-mode: multiply;
-    background-size: 100% 90%;
+    background-size: 100% 100%;
     background-position: center -90px;
     background-repeat: no-repeat;
   }
@@ -53,6 +53,10 @@ const HomeContainer = styled.main`
       margin: auto;
       
     }
+  }
+
+  .section2 {
+    margin-top: -70px;
   }
 `;
 

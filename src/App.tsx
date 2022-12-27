@@ -5,8 +5,8 @@ import {
   Route,
 } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import GlobalStyles from "./styled-components/GlobalStyle";
+import { Home } from "./pages";
+import { GlobalStyles } from "./styled-components";
 import { Helmet } from "react-helmet";
 const router = createBrowserRouter(
   createRoutesFromElements(<Route path="/" element={<Home />}></Route>)
