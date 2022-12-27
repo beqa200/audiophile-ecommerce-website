@@ -1,15 +1,20 @@
 import React from "react";
-import { HomeContainer, OrangeButton, BlackButton, TransparentButton } from "../styled-components";
+import {
+  HomeContainer,
+  OrangeButton,
+  BlackButton,
+  TransparentButton,
+} from "../styled-components";
 import data from "../data.json";
-import { Products } from "../components";
+import { Products, Advert } from "../components";
 import {
   headphonesMobile,
   speakersMobile,
   earphonesMobile,
   biggerSpeakersMobile,
-  biggerEarphonesMobile
-
+  biggerEarphonesMobile,
 } from "../assets";
+
 export default function Home() {
   console.log(data);
   const productsArr = [
@@ -61,8 +66,8 @@ export default function Home() {
           <BlackButton>SEE PRODUCT</BlackButton>
         </div>
         <div className="speaker7">
-        <h2>ZX7 SPEAKER</h2>
-        <TransparentButton>SEE PRODUCT</TransparentButton>
+          <h2>ZX7 SPEAKER</h2>
+          <TransparentButton>SEE PRODUCT</TransparentButton>
         </div>
         <div className="earphones">
           <img src={biggerEarphonesMobile} />
@@ -72,6 +77,9 @@ export default function Home() {
             <TransparentButton>SEE PRODUCT</TransparentButton>
           </div>
         </div>
+      </section>
+      <section className="section4">
+        <Advert />
       </section>
     </HomeContainer>
   );

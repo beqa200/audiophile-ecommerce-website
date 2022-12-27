@@ -10,3 +10,4 @@ export { default as biggerSpeakersMobile } from "./home/mobile/image-speaker-zx9
 export { default as circle } from "./icons/pattern-circles.svg";
 export { default as biggerSpeakersMobile2 } from "./home/mobile/image-speaker-zx7.jpg";
 export { default as biggerEarphonesMobile } from "./home/mobile/image-earphones-yx1.jpg";
+export { default as man } from "./shared/mobile/image-best-gear.jpg";

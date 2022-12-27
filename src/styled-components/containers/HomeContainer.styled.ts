@@ -151,6 +151,11 @@ const HomeContainer = styled.main`
       }
     }
   }
+
+  .section4 {
+    width: 90%;
+    margin: 100px auto;
+  }
 `;
 
 export default HomeContainer;
