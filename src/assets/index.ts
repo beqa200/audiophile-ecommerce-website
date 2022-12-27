@@ -11,3 +11,6 @@ export { default as circle } from "./icons/pattern-circles.svg";
 export { default as biggerSpeakersMobile2 } from "./home/mobile/image-speaker-zx7.jpg";
 export { default as biggerEarphonesMobile } from "./home/mobile/image-earphones-yx1.jpg";
 export { default as man } from "./shared/mobile/image-best-gear.jpg";
+export { default as facebook } from "./icons/icon-facebook.svg";
+export { default as twitter } from "./icons/icon-twitter.svg";
+export { default as instagram } from "./icons/icon-instagram.svg";

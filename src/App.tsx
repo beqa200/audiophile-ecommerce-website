@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import { Home } from "./pages";
 import { GlobalStyles } from "./styled-components";
 import { Helmet } from "react-helmet";
+import { Footer } from "./components";
 const router = createBrowserRouter(
   createRoutesFromElements(<Route path="/" element={<Home />}></Route>)
 );
@@ -25,6 +26,7 @@ function App() {
       <Header />
 
       <RouterProvider router={router}></RouterProvider>
+      <Footer />
     </>
   );
 }
