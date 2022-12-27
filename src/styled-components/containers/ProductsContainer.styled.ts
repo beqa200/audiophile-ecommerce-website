@@ -15,7 +15,7 @@ const ProductsContainer = styled.div`
 
   img {
     max-width: 40%;
-    margin-top: -15%;
+    margin-top: -50px;
   }
 
   p {
@@ -35,13 +35,13 @@ const ProductsContainer = styled.div`
     img {
       height: 11px;
       width: 7px;
-      margin-top: 22px;
+      margin-top: 36px;
     }
 
-    p{
-        font-size: 13px;
-        font-weight: 700;
-        opacity: 0.5;
+    p {
+      font-size: 13px;
+      font-weight: 700;
+      opacity: 0.5;
     }
   }
 `;

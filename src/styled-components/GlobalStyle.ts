@@ -3,15 +3,20 @@ import { createGlobalStyle, GlobalStyleComponent } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
 *{
-    font-family: 'manrope'
+    font-family: 'manrope';
+    margin: 0px;
+    padding: 0px;
 }
 
 
 body {
-    margin: 0px;
-    padding: 0px;
+
     width: 100vw;
     overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
 }
 `;
 
