@@ -1,17 +1,11 @@
-import {
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-} from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import { Home } from "./pages";
 import { GlobalStyles } from "./styled-components";
 import { Helmet } from "react-helmet";
 import { Footer } from "./components";
-const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<Home />}></Route>)
-);
+import Category from "./pages/Category";
+import ScrollToTop from "./ScrollOnTop";
 
 function App() {
   return (
@@ -23,10 +17,15 @@ function App() {
           rel="stylesheet"
         />
       </Helmet>
-      <Header />
-
-      <RouterProvider router={router}></RouterProvider>
-      <Footer />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path=":category" element={<Category />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { homeMainMobile, circle, biggerSpeakersMobile2 } from "../../assets";
 
-const HomeContainer = styled.main`
+const HomeContainer = styled.div`
   .section1 {
     width: 100%;
     height: 600px;
-    background-image: url(${homeMainMobile}),
+    background-image: url("./assets/home/mobile/image-header.jpg"),
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* black with 50% opacity */
     background-blend-mode: multiply;
     background-size: 100% 100%;
@@ -64,7 +63,7 @@ const HomeContainer = styled.main`
 
     .speaker9 {
       background-color: #d87d4a;
-      background-image: url(${circle});
+      background-image: url("./assets/icons/pattern-circles.svg");
       background-size: 170%;
       background-position: center -120px;
       background-repeat: no-repeat;
@@ -106,7 +105,7 @@ const HomeContainer = styled.main`
 
     .speaker7 {
       height: 340px;
-      background-image: url(${biggerSpeakersMobile2});
+      background-image: url("./assets/home/mobile/image-speaker-zx7.jpg");
       background-size: 100% 340px;
       background-repeat: no-repeat;
       border-radius: 8px;
@@ -144,16 +143,16 @@ const HomeContainer = styled.main`
         flex-direction: column;
         justify-content: space-evenly;
 
-        h2, button {
+        h2,
+        button {
           margin-left: 20px;
         }
-
       }
     }
   }
 
   .section4 {
-    width: 90%;
+    width: 100%;
     margin: 100px auto;
   }
 `;

@@ -7,30 +7,10 @@ import {
 } from "../styled-components";
 import data from "../data.json";
 import { Products, Advert } from "../components";
-import {
-  headphonesMobile,
-  speakersMobile,
-  earphonesMobile,
-  biggerSpeakersMobile,
-  biggerEarphonesMobile,
-} from "../assets";
 
 export default function Home() {
   console.log(data);
-  const productsArr = [
-    {
-      img: headphonesMobile,
-      name: "HEADPHONES",
-    },
-    {
-      img: speakersMobile,
-      name: "SPEAKERS",
-    },
-    {
-      img: earphonesMobile,
-      name: "EARPHONES",
-    },
-  ];
+
   return (
     <HomeContainer>
       <section className="section1">
@@ -45,19 +25,11 @@ export default function Home() {
         </div>
       </section>
       <section className="section2">
-        {productsArr.map((product) => {
-          return (
-            <Products
-              key={Math.random()}
-              img={product.img}
-              name={product.name}
-            />
-          );
-        })}
+        <Products />
       </section>
       <section className="section3">
         <div className="speaker9">
-          <img src={biggerSpeakersMobile} />
+          <img src="./assets/home/mobile/image-speaker-zx9.png" />
           <h2>ZX9 SPEAKER</h2>
           <p>
             Upgrade to premium speakers that are phenomenally built to deliver
@@ -70,7 +42,7 @@ export default function Home() {
           <TransparentButton>SEE PRODUCT</TransparentButton>
         </div>
         <div className="earphones">
-          <img src={biggerEarphonesMobile} />
+          <img src="./assets/home/mobile/image-earphones-yx1.jpg" />
 
           <div>
             <h2>YX1 EARPHONES</h2>

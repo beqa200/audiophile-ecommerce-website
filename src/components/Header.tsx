@@ -1,12 +1,11 @@
-import React from 'react'
-import HeaderContainer from '../styled-components/containers/HeaderContainer.styled'
-import { hamburger, logo, cart } from '../assets'
+import React from "react";
+import HeaderContainer from "../styled-components/containers/HeaderContainer.styled";
 export default function Header() {
   return (
     <HeaderContainer>
-        <img src={hamburger} />
-        <img src={logo}/>
-        <img src={cart} />
+      <img src="./assets/icons/icon-hamburger.svg" />
+      <img src="./assets/icons/logo.svg" />
+      <img src="./assets/icons/icon-cart.svg" />
     </HeaderContainer>
-  )
+  );
 }

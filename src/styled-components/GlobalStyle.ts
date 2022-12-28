@@ -18,6 +18,11 @@ body {
 button {
     cursor: pointer;
 }
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
 `;
 
 export default GlobalStyles;

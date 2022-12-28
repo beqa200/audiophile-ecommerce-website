@@ -1,16 +1,43 @@
-import React from 'react'
-import { arrowIcon } from '../assets'
-import { ProductsContainer } from '../styled-components'
+import React from "react";
+import { Link } from "react-router-dom";
+import { ProductsContainer } from "../styled-components";
 
-export default function Products(props: ProductProps) {
+export default function Products() {
+  const productsArr = [
+    {
+      img: "./assets/home/mobile/headphones-removebg-preview.png",
+      name: "HEADPHONES",
+      link: "/headphones",
+    },
+    {
+      img: "./assets/home/mobile/speakers-removebg-preview.png",
+      name: "SPEAKERS",
+      link: "/speakers",
+    },
+    {
+      img: "./assets/home/mobile/earphones-removebg-preview.png",
+      name: "EARPHONES",
+      link: "/earphones",
+    },
+  ];
+
   return (
-    <ProductsContainer >
-        <img src={props.img}/>
-        <p>{props.name}</p>
-        <div>
-            <p>SHOP</p>
-            <img src={arrowIcon} />
-        </div>
+    <ProductsContainer>
+      {productsArr.map((product) => {
+        return (
+          <Link to={product.link} key={Math.random()}>
+            <div className="wrapper">
+              <img src={product.img} />
+              <p style={{color: "black"}}>{product.name}</p>
+
+              <div className="forflex">
+                <p>SHOP</p>
+                <img src="./assets/icons/icon-arrow-right.svg" />
+              </div>
+            </div>
+          </Link>
+        );
+      })}
     </ProductsContainer>
-  )
+  );
 }

@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 const AdvertContainer = styled.div`
   margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
   img {
     max-width: 100%;
     border-radius: 8px;

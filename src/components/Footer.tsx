@@ -1,15 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FooterContainer } from "../styled-components";
-import { logo, facebook, twitter, instagram } from "../assets";
 export default function Footer() {
   return (
     <FooterContainer>
-      <img src={logo} />
-      <div className="pages">
-        <p>HOME</p>
-        <p> HEADPHONES</p>
-        <p>SPEAKERS</p>
-        <p>EARPHONES</p>
+      <img src="./assets/icons/logo.svg" />
+      <div className="pages" >
+        
+          <Link to="/">
+            <p style={{color: "white"}}>HOME</p>
+          </Link>
+          <Link to="/headphones">
+            <p style={{color: "white"}}> HEADPHONES</p>
+          </Link>
+
+          <Link to="/speakers">
+            <p style={{color: "white"}}>SPEAKERS</p>
+          </Link>
+          <Link to="/earphones">
+            <p style={{color: "white"}}>EARPHONES</p>
+          </Link>
+        
       </div>
 
       <p className="text">
@@ -22,9 +33,9 @@ export default function Footer() {
       <p className="copyright">Copyright 2021. All Rights Reserved</p>
 
       <div className="icons">
-        <img src={facebook} />
-        <img src={twitter} />
-        <img src={instagram} />
+        <img src="./assets/icons/icon-facebook.svg" />
+        <img src="./assets/icons/icon-twitter.svg" />
+        <img src="./assets/icons/icon-instagram.svg" />
       </div>
     </FooterContainer>
   );

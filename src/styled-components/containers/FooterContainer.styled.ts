@@ -22,7 +22,8 @@ const FooterContainer = styled.footer`
     font-weight: 700;
   }
 
-  .text, .copyright {
+  .text,
+  .copyright {
     margin-top: 48px;
     width: 90%;
     text-align: center;
