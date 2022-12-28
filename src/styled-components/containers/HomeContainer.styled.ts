@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
+     /* black with 50% opacity */
+
   .section1 {
     width: 100%;
     height: 600px;
