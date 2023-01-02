@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { facebookIcon, instagramIcon, logo, twitterIcon } from "../assets";
 import { FooterContainer } from "../styled-components";
 export default function Footer() {
   return (
     <FooterContainer>
-      <img src="./assets/icons/logo.svg" />
+      <img src={logo} />
       <div className="pages" >
         
           <Link to="/">
@@ -33,9 +34,9 @@ export default function Footer() {
       <p className="copyright">Copyright 2021. All Rights Reserved</p>
 
       <div className="icons">
-        <img src="./assets/icons/icon-facebook.svg" />
-        <img src="./assets/icons/icon-twitter.svg" />
-        <img src="./assets/icons/icon-instagram.svg" />
+        <img src={facebookIcon} />
+        <img src={twitterIcon} />
+        <img src={instagramIcon} />
       </div>
     </FooterContainer>
   );

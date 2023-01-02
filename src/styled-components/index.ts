@@ -10,3 +10,4 @@ export { default as ProductsContainer } from "./containers/ProductsContainer.sty
 export { default as AdvertContainer } from "./containers/AdvertContainer.styled";
 export { default as FooterContainer } from "./containers/FooterContainer.styled";
 export { default as CategoryContainer } from "./containers/CategoryContainer.styled";
+export { default as DetailsContainer } from "./containers/DetailsContainer.styled";

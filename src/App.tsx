@@ -1,10 +1,8 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import { Home } from "./pages";
+import { Details, Category, Home } from "./pages";
 import { GlobalStyles, BlackScreen } from "./styled-components";
 import { Helmet } from "react-helmet";
-import { Footer } from "./components";
-import Category from "./pages/Category";
+import { Footer, Header } from "./components";
 import ScrollToTop from "./ScrollOnTop";
 import { createContext, useState } from "react";
 
@@ -32,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path=":category" element={<Category />} />
+          <Route path=":category/:product" element={<Details />} />
         </Routes>
 
         <Footer />

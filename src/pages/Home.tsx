@@ -7,6 +7,7 @@ import {
 } from "../styled-components";
 import data from "../data.json";
 import { Products, Advert } from "../components";
+import { earphonesyx1Mobile, speakerZX9Mobile } from "../assets";
 
 export default function Home() {
   console.log(data);
@@ -29,7 +30,7 @@ export default function Home() {
       </section>
       <section className="section3">
         <div className="speaker9">
-          <img src="./assets/home/mobile/image-speaker-zx9.png" />
+          <img src={speakerZX9Mobile} />
           <h2>ZX9 SPEAKER</h2>
           <p>
             Upgrade to premium speakers that are phenomenally built to deliver
@@ -42,7 +43,7 @@ export default function Home() {
           <TransparentButton>SEE PRODUCT</TransparentButton>
         </div>
         <div className="earphones">
-          <img src="./assets/home/mobile/image-earphones-yx1.jpg" />
+          <img src={earphonesyx1Mobile} />
 
           <div>
             <h2>YX1 EARPHONES</h2>

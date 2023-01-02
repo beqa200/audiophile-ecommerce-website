@@ -4,15 +4,15 @@ import { Advert, Products } from "../components";
 import data from "../data.json";
 import { CategoryContainer, OrangeButton } from "../styled-components";
 export default function Category() {
-  const params: any = useParams();
-  const products: any = data.filter(
+  const params = useParams();
+  const products: Product[] | undefined = data.filter(
     (product) => product.category == params.category
   );
 
   return (
     <CategoryContainer>
       <section className="section1">
-        {products.map((product: any) => {
+        {products?.map((product: Product) => {
           return (
             <div key={product.id}>
               <img src={product.categoryImage.mobile} />

@@ -1,9 +1,10 @@
 import React from "react";
+import { gearMobile } from "../assets";
 import { AdvertContainer } from "../styled-components";
 export default function Advert() {
   return (
     <AdvertContainer>
-      <img src="./assets/shared/mobile/image-best-gear.jpg" />
+      <img src={gearMobile} />
       <h2>
         BRINGING YOU THE <span style={{ color: "#D87D4A" }}>BEST</span> AUDIO
         GEAR

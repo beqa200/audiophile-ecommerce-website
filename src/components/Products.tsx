@@ -1,23 +1,24 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MyContext } from "../App";
+import { arrowIcon, earphonesMobile, headphonesMobile, speakersMobile } from "../assets";
 import { ProductsContainer } from "../styled-components";
 
 export default function Products() {
   const context = useContext(MyContext);
   const productsArr = [
     {
-      img: "./assets/home/mobile/headphones-removebg-preview.png",
+      img: headphonesMobile,
       name: "HEADPHONES",
       link: "/headphones",
     },
     {
-      img: "./assets/home/mobile/speakers-removebg-preview.png",
+      img: speakersMobile,
       name: "SPEAKERS",
       link: "/speakers",
     },
     {
-      img: "./assets/home/mobile/earphones-removebg-preview.png",
+      img: earphonesMobile,
       name: "EARPHONES",
       link: "/earphones",
     },
@@ -31,7 +32,7 @@ export default function Products() {
             <div
               className="wrapper"
               onClick={() => {
-                context?.setMenu(!context?.menu);
+                context?.setMenu(false);
               }}
             >
               <img src={product.img} />
@@ -39,7 +40,7 @@ export default function Products() {
 
               <div className="forflex">
                 <p>SHOP</p>
-                <img src="./assets/icons/icon-arrow-right.svg" />
+                <img src={arrowIcon} />
               </div>
             </div>
           </Link>
