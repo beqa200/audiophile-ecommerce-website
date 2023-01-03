@@ -22,7 +22,9 @@ export default function Category() {
               </p>
               <h2>{product.name}</h2>
               <p className="description">{product.description}</p>
-              <Link to={"/" + product.category + "/" + product.slug}><OrangeButton>SEE PRODUCT</OrangeButton></Link>
+              <Link to={"/" + product.category + "/" + product.slug}>
+                <OrangeButton>SEE PRODUCT</OrangeButton>
+              </Link>
             </div>
           );
         })}

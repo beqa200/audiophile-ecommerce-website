@@ -4,23 +4,29 @@ import { DetailsContainer, OrangeButton } from "../styled-components";
 import data from "../data.json";
 import { Advert, Products } from "../components";
 import { Link } from "react-router-dom";
-import ScrollToTop from "../ScrollOnTop";
 export default function Details() {
   const params = useParams();
-  
+
   const navigate = useNavigate();
-  
 
   const product: Product | undefined = data.find(
     (product) =>
       product.slug == params.product && product.category == params.category
   );
 
-  return (
+  return product !== undefined ? (
     <DetailsContainer>
       <section className="section1">
         <Link to={"/" + product?.category}>
-          <p className="back" onClick={() => {navigate(-1); ScrollToTop()}}> Go Back</p>
+          <p
+            className="back"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            {" "}
+            Go Back
+          </p>
         </Link>
         <img className="product-image" src={"." + product?.image.mobile} />
         <p className="new">{product?.new == true ? "NEW PRODUCT" : null}</p>
@@ -58,8 +64,8 @@ export default function Details() {
         <div className="others">
           <h2>YOU MAY ALSO LIKE</h2>
           {product?.others.map((other) => {
-             const category = data.find((prod) => prod.slug == other.slug);
-            
+            const category = data.find((prod) => prod.slug == other.slug);
+
             return (
               <div key={Math.random()}>
                 <img src={"." + other.image.mobile} />
@@ -70,7 +76,6 @@ export default function Details() {
                 </Link>
               </div>
             );
-  
           })}
         </div>
       </section>
@@ -81,5 +86,9 @@ export default function Details() {
         <Advert />
       </section>
     </DetailsContainer>
+  ) : (
+    <div style={{ height: "100vw", fontSize: "30px", fontWeight: "700" }}>
+      404<br></br> PAGE NOT FOUND
+    </div>
   );
 }

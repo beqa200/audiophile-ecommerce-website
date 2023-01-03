@@ -39,18 +39,24 @@ export default function Home() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <BlackButton>SEE PRODUCT</BlackButton>
+          <Link to="/speakers/zx9-speaker">
+            <BlackButton>SEE PRODUCT</BlackButton>
+          </Link>
         </div>
         <div className="speaker7">
           <h2>ZX7 SPEAKER</h2>
-          <TransparentButton>SEE PRODUCT</TransparentButton>
+          <Link to="/speakers/zx7-speaker">
+            <TransparentButton>SEE PRODUCT</TransparentButton>
+          </Link>
         </div>
         <div className="earphones">
           <img src={earphonesyx1Mobile} />
 
           <div>
             <h2>YX1 EARPHONES</h2>
-            <TransparentButton>SEE PRODUCT</TransparentButton>
+            <Link to="/earphones/yx1-earphones">
+              <TransparentButton>SEE PRODUCT</TransparentButton>
+            </Link>
           </div>
         </div>
       </section>
