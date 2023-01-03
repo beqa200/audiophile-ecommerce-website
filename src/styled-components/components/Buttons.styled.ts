@@ -22,4 +22,5 @@ export const BlackButton = styled(Button)`
 export const TransparentButton = styled(Button)`
   background-color: transparent;
   border: 1px solid #000000;
+  color: black;
 `;

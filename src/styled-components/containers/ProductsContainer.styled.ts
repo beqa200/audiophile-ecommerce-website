@@ -41,6 +41,7 @@ const ProductsContainer = styled.div`
         font-size: 13px;
         font-weight: 700;
         opacity: 0.5;
+        color: black;
       }
     }
   }
