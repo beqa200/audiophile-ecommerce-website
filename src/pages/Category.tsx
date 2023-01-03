@@ -1,5 +1,6 @@
 import React, { ReactNode, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { Advert, Products } from "../components";
 import data from "../data.json";
 import { CategoryContainer, OrangeButton } from "../styled-components";
@@ -21,7 +22,7 @@ export default function Category() {
               </p>
               <h2>{product.name}</h2>
               <p className="description">{product.description}</p>
-              <OrangeButton>SEE PRODUCT</OrangeButton>
+              <Link to={"/" + product.category + "/" + product.slug}><OrangeButton>SEE PRODUCT</OrangeButton></Link>
             </div>
           );
         })}

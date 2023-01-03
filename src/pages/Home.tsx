@@ -8,6 +8,7 @@ import {
 import data from "../data.json";
 import { Products, Advert } from "../components";
 import { earphonesyx1Mobile, speakerZX9Mobile } from "../assets";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   console.log(data);
@@ -22,7 +23,9 @@ export default function Home() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <OrangeButton>SEE PRODUCT</OrangeButton>
+          <Link to="/headphones/xx99-mark-two-headphones">
+            <OrangeButton>SEE PRODUCT</OrangeButton>
+          </Link>
         </div>
       </section>
       <section className="section2">

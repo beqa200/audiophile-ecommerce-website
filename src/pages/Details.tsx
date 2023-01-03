@@ -1,11 +1,16 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useLocation, useNavigate, useParams } from "react-router";
 import { DetailsContainer, OrangeButton } from "../styled-components";
 import data from "../data.json";
 import { Advert, Products } from "../components";
+import { Link } from "react-router-dom";
+import ScrollToTop from "../ScrollOnTop";
 export default function Details() {
   const params = useParams();
-  console.log(data);
+  
+  const navigate = useNavigate();
+  
+
   const product: Product | undefined = data.find(
     (product) =>
       product.slug == params.product && product.category == params.category
@@ -14,13 +19,22 @@ export default function Details() {
   return (
     <DetailsContainer>
       <section className="section1">
-        <p className="back"> Go Back</p>
+        <Link to={"/" + product?.category}>
+          <p className="back" onClick={() => {navigate(-1); ScrollToTop()}}> Go Back</p>
+        </Link>
         <img className="product-image" src={"." + product?.image.mobile} />
-        <p>{product?.new == true ? "NEW PRODUCT" : null}</p>
+        <p className="new">{product?.new == true ? "NEW PRODUCT" : null}</p>
         <h2 className="product-name">{product?.name}</h2>
         <p className="description">{product?.description}</p>
         <p className="price">{"$ " + product?.price}</p>
-        <div className="add-cart"></div>
+        <div className="add-cart">
+          <div className="quantity">
+            <p>-</p>
+            <p className="num">0</p>
+            <p>+</p>
+          </div>
+          <OrangeButton>ADD TO CART</OrangeButton>
+        </div>
         <div className="features">
           <h2>FEATURES</h2>
           <p>{product?.features}</p>
@@ -44,13 +58,19 @@ export default function Details() {
         <div className="others">
           <h2>YOU MAY ALSO LIKE</h2>
           {product?.others.map((other) => {
+             const category = data.find((prod) => prod.slug == other.slug);
+            
             return (
               <div key={Math.random()}>
                 <img src={"." + other.image.mobile} />
-                <h2>{"." + other.name}</h2>
-                <OrangeButton>SEE PRODUCT</OrangeButton>
+                <h2>{other.name}</h2>
+
+                <Link to={"/" + category?.category + "/" + other.slug}>
+                  <OrangeButton>SEE PRODUCT</OrangeButton>
+                </Link>
               </div>
             );
+  
           })}
         </div>
       </section>
