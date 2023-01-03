@@ -1,11 +1,24 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "../App";
 import { cartIcon, hamuberIcon, logo } from "../assets";
 import HeaderContainer from "../styled-components/containers/HeaderContainer.styled";
+import Cart from "./Cart";
 import Products from "./Products";
 export default function Header() {
   const context = useContext(MyContext);
-  console.log(context?.menu);
+
+  useEffect(() => {
+    if (context?.menu == true) {
+      context.setCart(false);
+    }
+  }, [context?.menu]);
+
+  useEffect(() => {
+    if (context?.cart == true) {
+      context.setMenu(false);
+    }
+  }, [context?.cart]);
+
   return (
     <HeaderContainer>
       <img
@@ -15,8 +28,19 @@ export default function Header() {
         }}
       />
       <img src={logo} />
-      <img src={cartIcon} />
+
+      <div className="cart">
+        <img
+          src={cartIcon}
+          onClick={() => {
+            context?.setCart(!context?.cart);
+          }}
+        />
+        <p style={context?.cartObject.length != 0 ? {display: "flex"} : {display: "none"}} className="count">{context?.cartObject.length}</p>
+      </div>
+
       <div className="menu">{context?.menu && <Products />}</div>
+      {context?.cart && <Cart />}
     </HeaderContainer>
   );
 }

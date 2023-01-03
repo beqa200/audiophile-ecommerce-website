@@ -9,8 +9,13 @@ import { createContext, useState } from "react";
 export const MyContext = createContext<ContextProps | null>(null);
 function App() {
   const [menu, setMenu] = useState<Boolean>(false);
+  const [cart, setCart] = useState<Boolean>(false);
+  const [cartObject, setCartObject] = useState<CartObject[]>([]);
+
   return (
-    <MyContext.Provider value={{ menu, setMenu }}>
+    <MyContext.Provider
+      value={{ menu, setMenu, cartObject, setCartObject, cart, setCart }}
+    >
       <GlobalStyles menu={menu} />
 
       <Helmet>
@@ -23,7 +28,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
 
-        {menu && <BlackScreen />}
+        {(menu || cart) && <BlackScreen />}
 
         <Header />
 

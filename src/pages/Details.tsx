@@ -1,19 +1,40 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { DetailsContainer, OrangeButton } from "../styled-components";
 import data from "../data.json";
 import { Advert, Products } from "../components";
 import { Link } from "react-router-dom";
+import { MyContext } from "../App";
 export default function Details() {
   const params = useParams();
-
   const navigate = useNavigate();
+
+  const [productNum, setProductNum] = useState(0);
+  const context = useContext(MyContext);
+  const addCart = (productNum: number) => {
+    if (context?.cartObject.some((element) => element.name == product?.model)) {
+      const index = context?.cartObject.findIndex(
+        (element) => element.name == product?.model
+      );
+      context.cartObject[index].quantity = productNum;
+      context.setCartObject(context.cartObject);
+    } else {
+      context?.setCartObject([
+        {
+          name: product?.model,
+          quantity: productNum,
+          price: product?.price,
+          img: "/assets/cart/image-" + product?.slug + ".jpg",
+        },
+        ...context?.cartObject,
+      ]);
+    }
+  };
 
   const product: Product | undefined = data.find(
     (product) =>
       product.slug == params.product && product.category == params.category
   );
-
   return product !== undefined ? (
     <DetailsContainer>
       <section className="section1">
@@ -35,11 +56,32 @@ export default function Details() {
         <p className="price">{"$ " + product?.price}</p>
         <div className="add-cart">
           <div className="quantity">
-            <p>-</p>
-            <p className="num">0</p>
-            <p>+</p>
+            <p
+              onClick={() => {
+                productNum >= 1 && setProductNum(productNum - 1);
+              }}
+            >
+              -
+            </p>
+            <p className="num">{productNum}</p>
+            <p
+              onClick={() => {
+                setProductNum(productNum + 1);
+              }}
+            >
+              +
+            </p>
           </div>
-          <OrangeButton>ADD TO CART</OrangeButton>
+          <OrangeButton
+            onClick={() => {
+              if (productNum >= 1) {
+                addCart(productNum);
+                setProductNum(0);
+              }
+            }}
+          >
+            ADD TO CART
+          </OrangeButton>
         </div>
         <div className="features">
           <h2>FEATURES</h2>
