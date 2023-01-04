@@ -39,7 +39,15 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
 
-        {(menu || cart || submit) && <BlackScreen />}
+        {(menu || cart || submit) && (
+          <BlackScreen
+            onClick={() => {
+              setMenu(false);
+              setCart(false);
+              setSubmit(false);
+            }}
+          />
+        )}
 
         <Header />
 

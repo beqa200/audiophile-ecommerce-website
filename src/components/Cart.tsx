@@ -5,6 +5,12 @@ import { CartContainer, OrangeButton } from "../styled-components";
 
 export default function Cart() {
   const context = useContext(MyContext);
+  const zero = context?.cartObject.findIndex(
+    (element) => element.quantity == 0
+  );
+  if (zero != undefined) {
+    context?.cartObject.splice(zero, zero + 1);
+  }
   return (
     <CartContainer>
       <div className="head">
@@ -64,7 +70,13 @@ export default function Cart() {
         <p className="number">{"$ " + context?.total.toLocaleString()}</p>
       </div>
       <Link to="/checkout">
-        <OrangeButton onClick={() => {context?.setCart(false)}}>CHECKOUT</OrangeButton>
+        <OrangeButton
+          onClick={() => {
+            context?.setCart(false);
+          }}
+        >
+          CHECKOUT
+        </OrangeButton>
       </Link>
     </CartContainer>
   );

@@ -37,7 +37,7 @@ export default function Checkout() {
     if (context?.cartObject.length == 0) {
       navigate(-1);
     }
-  }, []);
+  }, [context?.cartObject.length]);
 
   return (
     <CheckoutContainer>
