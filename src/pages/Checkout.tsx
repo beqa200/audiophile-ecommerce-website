@@ -32,7 +32,10 @@ export default function Checkout() {
   const [countryVal, setCountryVal] = useState(false);
   const [numberVal, setNumberVal] = useState(false);
   const [pinVal, setPinVal] = useState(false);
+  if(context?.total != undefined) {
+    context.total = 0;
 
+  }
   useEffect(() => {
     if (context?.cartObject.length == 0) {
       navigate(-1);
@@ -245,9 +248,11 @@ export default function Checkout() {
         <h2>SUMMARY</h2>
         <div className="products">
           {context?.cartObject.map((element) => {
-            if (element.price != undefined) {
-              context.total = context.total + element.price * element.quantity;
-            }
+           
+              if (element.price != undefined) {
+                context.total = context.total + element.price * element.quantity;
+              }
+            
             return (
               <div className="prod" key={Math.random()}>
                 <div className="for-flex">
@@ -266,7 +271,7 @@ export default function Checkout() {
         </div>
         <div className="total">
           <p>TOTAL</p>
-          <p className="number">{"$ " + context?.total.toLocaleString()}</p>
+          <p className="number">{"$ " + (context?.total != undefined && context?.total.toLocaleString())}</p>
         </div>
         <div className="shipping">
           <p>SHIPPING</p>
@@ -277,7 +282,7 @@ export default function Checkout() {
           <p className="number">
             {"$ " +
               (
-                context?.cartObject != undefined && context.total + 50
+                (context?.cartObject != undefined && context.total != undefined) && context.total + 50
               ).toLocaleString()}
           </p>
         </div>

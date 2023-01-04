@@ -40,7 +40,7 @@ export default function Ordered() {
         </p>
         <div className="grand">
           <p>GRAND TOTAL</p>
-          <p className="number">{"$ " + context?.total}</p>
+          <p className="number">{"$ " + (context?.total)?.toLocaleString()}</p>
         </div>
       </div>
       <Link to="/">

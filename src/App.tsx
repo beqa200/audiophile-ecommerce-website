@@ -12,7 +12,8 @@ function App() {
   const [cart, setCart] = useState<Boolean>(false);
   const [submit, setSubmit] = useState<Boolean>(false);
   const [cartObject, setCartObject] = useState<CartObject[]>([]);
-  let total = 0;
+  
+  let total=0;
   return (
     <MyContext.Provider
       value={{
