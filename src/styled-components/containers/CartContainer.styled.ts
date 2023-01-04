@@ -35,6 +35,7 @@ const CartContainer = styled.div`
       justify-content: space-between;
       align-items: center;
       margin-top: 24px;
+      margin-bottom: 24px;
       img {
         width: 64px;
         border-radius: 8px;

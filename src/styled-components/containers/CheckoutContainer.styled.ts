@@ -54,19 +54,19 @@ const CheckoutContainer = styled.div`
       div {
         display: flex;
         align-items: center;
-        border: 1px solid #cfcfcf;
         border-radius: 8px;
         height: 47px;
         padding-bottom: 9px;
         padding-left: 16px;
         margin-top: 16px;
+        border: 1px solid #cfcfcf;
 
         input {
           max-width: 20px;
           max-height: 20px;
-          accent-color: #D87D4A;
+          accent-color: #d87d4a;
+          padding: 20px;
         }
-       
 
         label {
           margin-top: 9px;
@@ -77,6 +77,107 @@ const CheckoutContainer = styled.div`
           letter-spacing: -0.25px;
         }
       }
+    }
+  }
+
+  .summary {
+    background-color: white;
+    width: calc(90% - 57px);
+    max-width: 377px;
+    margin: 32px auto 97px;
+    padding: 32px 29px 31px 28px;
+    border-radius: 8px;
+
+    p {
+      font-size: 15px;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        opacity: 0.5;
+        text-decoration: underline;
+      }
+    }
+    .products {
+      margin-top: 31px;
+      margin-bottom: 24px;
+      max-height: 300px;
+      overflow-y: auto;
+      border-top: 1px solid #cfcfcf;
+      border-bottom: 1px solid #cfcfcf;
+      .prod {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        img {
+          width: 64px;
+          border-radius: 8px;
+        }
+
+        .for-flex {
+          display: flex;
+          align-items: center;
+          .for-flex-inner {
+            margin-left: 16px;
+            font-size: 15px;
+            font-weight: 700;
+            .name {
+              line-height: 25px;
+            }
+            .price {
+              opacity: 0.5;
+              line-height: 25px;
+            }
+          }
+        }
+        .quantity {
+
+          p {
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+            opacity: 0.5;
+          }
+
+        
+        }
+      }
+    }
+
+    .total, .shipping, .grand-total {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 15px;
+        opacity: 0.5;
+      }
+
+      .number {
+        font-size: 18px;
+        font-weight: 700;
+        opacity: 1;
+      }
+    }
+
+    .grand-total {
+      margin-top: 24px;
+      .number {
+        color: #D87D4A;
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-top: 24px;
     }
   }
 `;

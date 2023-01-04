@@ -14,3 +14,4 @@ export { default as speakerZX9Mobile } from "./home/mobile/image-speaker-zx9.png
 export { default as speakerZX7Mobile } from "./home/mobile/image-speaker-zx7.jpg";
 export { default as earphonesyx1Mobile } from "./home/mobile/image-earphones-yx1.jpg";
 export { default as gearMobile } from "./shared/mobile/image-best-gear.jpg";
+export { default as orderIcon } from "./icons/icon-order-confirmation.svg";
