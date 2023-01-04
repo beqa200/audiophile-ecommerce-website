@@ -26,6 +26,10 @@ const CartContainer = styled.div`
   }
   .products {
     margin-top: 31px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #CFCFCF;
+    border-bottom: 1px solid #CFCFCF;
     .prod {
       display: flex;
       justify-content: space-between;

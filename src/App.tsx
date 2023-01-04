@@ -1,10 +1,11 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { Details, Category, Home } from "./pages";
+import { Checkout, Details, Category, Home } from "./pages";
 import { GlobalStyles, BlackScreen } from "./styled-components";
 import { Helmet } from "react-helmet";
 import { Footer, Header } from "./components";
 import ScrollToTop from "./ScrollOnTop";
 import { createContext, useState } from "react";
+
 
 export const MyContext = createContext<ContextProps | null>(null);
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <MyContext.Provider
       value={{ menu, setMenu, cartObject, setCartObject, cart, setCart }}
     >
-      <GlobalStyles menu={menu} />
+      <GlobalStyles/>
 
       <Helmet>
         <link
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path=":category" element={<Category />} />
           <Route path=":category/:product" element={<Details />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
 
         <Footer />

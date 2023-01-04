@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { MyContext } from "../App";
 import { CartContainer, OrangeButton } from "../styled-components";
 
@@ -63,7 +64,9 @@ export default function Cart() {
         <p>TOTAL</p>
         <p className="number">{"$ " + total.toLocaleString()}</p>
       </div>
-      <OrangeButton>CHECKOUT</OrangeButton>
+      <Link to="/checkout">
+        <OrangeButton onClick={() => {context?.setCart(false)}}>CHECKOUT</OrangeButton>
+      </Link>
     </CartContainer>
   );
 }

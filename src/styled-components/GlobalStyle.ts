@@ -1,9 +1,7 @@
 import { createGlobalStyle, GlobalStyleComponent } from "styled-components";
 import styled from "styled-components";
 
-type PropsType = {
-  menu: Boolean;
-};
+
 const GlobalStyles = createGlobalStyle`
 
 *{
@@ -16,10 +14,10 @@ const GlobalStyles = createGlobalStyle`
 
 body {
     
-    overflow: ${(props: PropsType) => props.menu && "hidden"};
+   
     width: 100vw;
     overflow-x: hidden;
-    
+    background-color: #FAFAFA;
 }
 
 
