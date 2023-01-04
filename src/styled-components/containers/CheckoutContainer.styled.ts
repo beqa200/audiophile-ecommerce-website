@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const CheckoutContainer = styled.div`
+  position: relative;
   .back {
     color: black;
     opacity: 0.7;
@@ -137,20 +138,19 @@ const CheckoutContainer = styled.div`
           }
         }
         .quantity {
-
           p {
             color: black;
             font-size: 15px;
             font-weight: 700;
             opacity: 0.5;
           }
-
-        
         }
       }
     }
 
-    .total, .shipping, .grand-total {
+    .total,
+    .shipping,
+    .grand-total {
       margin-top: 8px;
       display: flex;
       justify-content: space-between;
@@ -171,7 +171,7 @@ const CheckoutContainer = styled.div`
     .grand-total {
       margin-top: 24px;
       .number {
-        color: #D87D4A;
+        color: #d87d4a;
       }
     }
 

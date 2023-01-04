@@ -5,7 +5,6 @@ import { CartContainer, OrangeButton } from "../styled-components";
 
 export default function Cart() {
   const context = useContext(MyContext);
-  let total = 0;
   return (
     <CartContainer>
       <div className="head">
@@ -22,7 +21,7 @@ export default function Cart() {
       <div className="products">
         {context?.cartObject.map((element) => {
           if (element.price != undefined) {
-            total = total + element.price * element.quantity;
+            context.total = context.total + element.price * element.quantity;
           }
           return (
             <div className="prod" key={Math.random()}>
@@ -62,7 +61,7 @@ export default function Cart() {
       </div>
       <div className="total">
         <p>TOTAL</p>
-        <p className="number">{"$ " + total.toLocaleString()}</p>
+        <p className="number">{"$ " + context?.total.toLocaleString()}</p>
       </div>
       <Link to="/checkout">
         <OrangeButton onClick={() => {context?.setCart(false)}}>CHECKOUT</OrangeButton>

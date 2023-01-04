@@ -7,6 +7,9 @@ type ContextProps = {
   setCartObject(cartObject: CartObject[]): void;
   cart: Boolean;
   setCart(cart: Boolean): void;
+  total: number;
+  submit: Boolean;
+  setSubmit(submit: Boolean): void;
 };
 
 type CartObject = {

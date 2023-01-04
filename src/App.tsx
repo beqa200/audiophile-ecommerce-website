@@ -6,18 +6,28 @@ import { Footer, Header } from "./components";
 import ScrollToTop from "./ScrollOnTop";
 import { createContext, useState } from "react";
 
-
 export const MyContext = createContext<ContextProps | null>(null);
 function App() {
   const [menu, setMenu] = useState<Boolean>(false);
   const [cart, setCart] = useState<Boolean>(false);
+  const [submit, setSubmit] = useState<Boolean>(false);
   const [cartObject, setCartObject] = useState<CartObject[]>([]);
-
+  let total = 0;
   return (
     <MyContext.Provider
-      value={{ menu, setMenu, cartObject, setCartObject, cart, setCart }}
+      value={{
+        menu,
+        setMenu,
+        cartObject,
+        setCartObject,
+        cart,
+        setCart,
+        total,
+        setSubmit,
+        submit,
+      }}
     >
-      <GlobalStyles/>
+      <GlobalStyles />
 
       <Helmet>
         <link
@@ -29,7 +39,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
 
-        {(menu || cart) && <BlackScreen />}
+        {(menu || cart || submit) && <BlackScreen />}
 
         <Header />
 

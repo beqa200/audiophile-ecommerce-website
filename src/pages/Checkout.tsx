@@ -3,12 +3,16 @@ import { useNavigate, Navigate } from "react-router";
 import { Link } from "react-router-dom";
 import { MyContext } from "../App";
 import { Products } from "../components";
-import { CheckoutContainer, OrangeButton } from "../styled-components";
+import Ordered from "../components/Ordered";
+import {
+  BlackScreen,
+  CheckoutContainer,
+  OrangeButton,
+} from "../styled-components";
 
 export default function Checkout() {
   const context = useContext(MyContext);
   const navigate = useNavigate();
-  let total = 0;
   const [name, setName] = useState<any>("");
   const [email, setEmail] = useState<any>("");
   const [phone, setPhone] = useState<any>("");
@@ -18,7 +22,6 @@ export default function Checkout() {
   const [country, setCountry] = useState<any>("");
   const [emoneyNumber, setEmoneyNumber] = useState<any>("");
   const [emoneyPin, setEmoneyPin] = useState<any>("");
-  const [submit, setSubmit] = useState(false);
 
   const [nameVal, setNameVal] = useState(false);
   const [emailVal, setEmailVal] = useState(false);
@@ -30,11 +33,11 @@ export default function Checkout() {
   const [numberVal, setNumberVal] = useState(false);
   const [pinVal, setPinVal] = useState(false);
 
-  //   useEffect(() => {
-  //     if (context?.cartObject.length == 0) {
-  //       navigate(-1);
-  //     }
-  //   }, []);
+  useEffect(() => {
+    if (context?.cartObject.length == 0) {
+      navigate(-1);
+    }
+  }, []);
 
   return (
     <CheckoutContainer>
@@ -243,7 +246,7 @@ export default function Checkout() {
         <div className="products">
           {context?.cartObject.map((element) => {
             if (element.price != undefined) {
-              total = total + element.price * element.quantity;
+              context.total = context.total + element.price * element.quantity;
             }
             return (
               <div className="prod" key={Math.random()}>
@@ -263,7 +266,7 @@ export default function Checkout() {
         </div>
         <div className="total">
           <p>TOTAL</p>
-          <p className="number">{"$ " + total.toLocaleString()}</p>
+          <p className="number">{"$ " + context?.total.toLocaleString()}</p>
         </div>
         <div className="shipping">
           <p>SHIPPING</p>
@@ -271,7 +274,12 @@ export default function Checkout() {
         </div>
         <div className="grand-total">
           <p>GRAND TOTAL</p>
-          <p className="number">{"$ " + (total + 50).toLocaleString()}</p>
+          <p className="number">
+            {"$ " +
+              (
+                context?.cartObject != undefined && context.total + 50
+              ).toLocaleString()}
+          </p>
         </div>
         <OrangeButton
           onClick={(e) => {
@@ -286,7 +294,7 @@ export default function Checkout() {
               numberVal == true &&
               pinVal == true
             ) {
-              setSubmit(true);
+              context?.setSubmit(true);
               setName("");
               setEmail("");
               setPhone("");
@@ -302,6 +310,7 @@ export default function Checkout() {
           CONTINUE & PAY
         </OrangeButton>
       </div>
+      {context?.submit && <Ordered />}
     </CheckoutContainer>
   );
 }
