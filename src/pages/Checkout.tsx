@@ -44,7 +44,9 @@ export default function Checkout() {
 
   return (
     <CheckoutContainer>
-      <p className="back">Go Back</p>
+      <p className="back" onClick={() => {
+        navigate(-1);
+      }}>Go Back</p>
       <form className="checkout">
         <h1>CHECKOUT</h1>
         <div className="billing-details">

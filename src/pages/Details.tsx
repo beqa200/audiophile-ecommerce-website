@@ -59,6 +59,7 @@ export default function Details() {
             <p
               onClick={() => {
                 productNum >= 1 && setProductNum(productNum - 1);
+                
               }}
             >
               -

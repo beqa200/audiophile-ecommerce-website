@@ -22,6 +22,7 @@ const CartContainer = styled.div`
     p {
       opacity: 0.5;
       text-decoration: underline;
+      cursor: pointer;
     }
   }
   .products {
@@ -69,10 +70,15 @@ const CartContainer = styled.div`
           font-size: 13px;
           font-weight: 700;
           opacity: 0.7;
+          cursor: pointer;
+          width: 20%;
+          line-height: 30px;
+          text-align: center;
         }
 
         .num {
           opacity: 1;
+          cursor: text;
         }
       }
     }

@@ -9,6 +9,7 @@ const CheckoutContainer = styled.div`
     line-height: 25px;
     margin: 16px auto 0px;
     width: 90%;
+    cursor: pointer;
   }
 
   .checkout {

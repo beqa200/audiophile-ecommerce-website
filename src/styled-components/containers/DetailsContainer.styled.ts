@@ -68,10 +68,15 @@ const DetailsContainer = styled.div`
       p {
         font-size: 13px;
         font-weight: 700;
+        width: 20%;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
       }
 
       .num {
         opacity: 1;
+        cursor: text;
       }
     }
 

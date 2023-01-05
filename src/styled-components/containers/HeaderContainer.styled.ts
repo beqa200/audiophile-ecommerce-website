@@ -13,7 +13,7 @@ const HeaderContainer = styled.header`
 
   .cart {
     position: relative;
-
+    cursor: pointer;
     .count {
       position: absolute;
       top: -7px;
@@ -35,6 +35,7 @@ const HeaderContainer = styled.header`
     background-color: white;
     width: 100%;
     top: 75px;
+    cursor: pointer;
   }
 `;
 
