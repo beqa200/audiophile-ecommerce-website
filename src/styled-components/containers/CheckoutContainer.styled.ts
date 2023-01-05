@@ -22,6 +22,7 @@ const CheckoutContainer = styled.div`
     h1 {
       margin-bottom: 32px;
     }
+
     div {
       .headname {
         font-weight: 700;
@@ -31,6 +32,7 @@ const CheckoutContainer = styled.div`
         letter-spacing: 0.928571px;
         margin-top: 32px;
       }
+
       div {
         p {
           margin-top: 24px;
@@ -104,6 +106,7 @@ const CheckoutContainer = styled.div`
         text-decoration: underline;
       }
     }
+
     .products {
       margin-top: 31px;
       margin-bottom: 24px;
@@ -111,12 +114,14 @@ const CheckoutContainer = styled.div`
       overflow-y: auto;
       border-top: 1px solid #cfcfcf;
       border-bottom: 1px solid #cfcfcf;
+
       .prod {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 24px;
         margin-bottom: 24px;
+
         img {
           width: 64px;
           border-radius: 8px;
@@ -125,13 +130,16 @@ const CheckoutContainer = styled.div`
         .for-flex {
           display: flex;
           align-items: center;
+
           .for-flex-inner {
             margin-left: 16px;
             font-size: 15px;
             font-weight: 700;
+
             .name {
               line-height: 25px;
             }
+
             .price {
               opacity: 0.5;
               line-height: 25px;
@@ -171,6 +179,7 @@ const CheckoutContainer = styled.div`
 
     .grand-total {
       margin-top: 24px;
+
       .number {
         color: #d87d4a;
       }

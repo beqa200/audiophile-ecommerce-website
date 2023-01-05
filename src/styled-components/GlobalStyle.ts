@@ -1,6 +1,5 @@
-import { createGlobalStyle, GlobalStyleComponent } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-
 
 const GlobalStyles = createGlobalStyle`
 
@@ -13,8 +12,6 @@ const GlobalStyles = createGlobalStyle`
 
 
 body {
-    
-   
     width: 100vw;
     overflow-x: hidden;
     background-color: #FAFAFA;

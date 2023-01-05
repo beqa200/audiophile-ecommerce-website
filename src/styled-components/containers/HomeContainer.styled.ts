@@ -1,14 +1,16 @@
 import styled from "styled-components";
-import { circlePattern, imageHeaderMobile, speakerZX7Mobile } from "../../assets";
+import {
+  circlePattern,
+  imageHeaderMobile,
+  speakerZX7Mobile,
+} from "../../assets";
 
 const HomeContainer = styled.div`
-     /* black with 50% opacity */
-
   .section1 {
     width: 100%;
     height: 600px;
     background-image: url(${imageHeaderMobile}),
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* black with 50% opacity */
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-blend-mode: multiply;
     background-size: 100% 100%;
     background-position: center -90px;
@@ -19,6 +21,7 @@ const HomeContainer = styled.div`
     width: 100%;
     margin: auto;
     padding-top: 110px;
+
     .head {
       position: absolute;
       color: white;
@@ -131,6 +134,7 @@ const HomeContainer = styled.div`
 
     .earphones {
       margin-top: 20px;
+
       img {
         width: 100%;
         border-radius: 8px;

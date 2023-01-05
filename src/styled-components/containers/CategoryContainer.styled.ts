@@ -6,12 +6,14 @@ const CategoryContainer = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     margin-top: -56px;
+
     div {
       width: 90%;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 120px;
+
       img {
         max-width: 100%;
       }

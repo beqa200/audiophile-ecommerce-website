@@ -6,6 +6,7 @@ import { OrangeButton, OrderedContainer } from "../styled-components";
 
 export default function Ordered() {
   const context = useContext(MyContext);
+
   return context?.cartObject.length != 0 ? (
     <OrderedContainer>
       <img src={orderIcon} />
@@ -40,7 +41,7 @@ export default function Ordered() {
         </p>
         <div className="grand">
           <p>GRAND TOTAL</p>
-          <p className="number">{"$ " + (context?.total)?.toLocaleString()}</p>
+          <p className="number">{"$ " + context?.total?.toLocaleString()}</p>
         </div>
       </div>
       <Link to="/">

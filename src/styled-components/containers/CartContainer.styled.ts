@@ -25,18 +25,21 @@ const CartContainer = styled.div`
       cursor: pointer;
     }
   }
+
   .products {
     margin-top: 31px;
     max-height: 300px;
     overflow-y: auto;
-    border-top: 1px solid #CFCFCF;
-    border-bottom: 1px solid #CFCFCF;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+
     .prod {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 24px;
       margin-bottom: 24px;
+
       img {
         width: 64px;
         border-radius: 8px;
@@ -45,13 +48,16 @@ const CartContainer = styled.div`
       .for-flex {
         display: flex;
         align-items: center;
+
         .for-flex-inner {
           margin-left: 16px;
           font-size: 15px;
           font-weight: 700;
+
           .name {
             line-height: 25px;
           }
+
           .price {
             opacity: 0.5;
             line-height: 25px;
@@ -89,16 +95,16 @@ const CartContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-    p{
-        font-size: 15px;
-        opacity: 0.5;
+
+    p {
+      font-size: 15px;
+      opacity: 0.5;
     }
 
     .number {
-        font-size: 18px;
-        font-weight: 700;
-        opacity: 1;
+      font-size: 18px;
+      font-weight: 700;
+      opacity: 1;
     }
   }
 

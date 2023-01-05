@@ -35,6 +35,7 @@ const OrderedContainer = styled.div`
 
     .first {
       padding: 32px 29px 31px 28px;
+
       img {
         width: 64px;
         border-radius: 8px;
@@ -43,14 +44,17 @@ const OrderedContainer = styled.div`
       .for-flex {
         display: flex;
         align-items: center;
+
         .for-flex-inner {
           margin-left: 16px;
           font-size: 15px;
           font-weight: 700;
+
           .name {
             line-height: 25px;
             width: 80px;
           }
+
           .price {
             opacity: 0.5;
             line-height: 25px;
@@ -84,7 +88,6 @@ const OrderedContainer = styled.div`
       font-size: 12px;
       opacity: 0.5;
       text-align: center;
-
     }
 
     .grand {

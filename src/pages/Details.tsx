@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { DetailsContainer, OrangeButton } from "../styled-components";
 import data from "../data.json";
 import { Advert, Products } from "../components";
@@ -8,9 +8,9 @@ import { MyContext } from "../App";
 export default function Details() {
   const params = useParams();
   const navigate = useNavigate();
-
   const [productNum, setProductNum] = useState(0);
   const context = useContext(MyContext);
+
   const addCart = (productNum: number) => {
     if (context?.cartObject.some((element) => element.name == product?.model)) {
       const index = context?.cartObject.findIndex(
@@ -59,7 +59,6 @@ export default function Details() {
             <p
               onClick={() => {
                 productNum >= 1 && setProductNum(productNum - 1);
-                
               }}
             >
               -

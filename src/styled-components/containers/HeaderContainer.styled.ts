@@ -14,6 +14,7 @@ const HeaderContainer = styled.header`
   .cart {
     position: relative;
     cursor: pointer;
+
     .count {
       position: absolute;
       top: -7px;

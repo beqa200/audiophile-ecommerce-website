@@ -5,14 +5,11 @@ import {
   BlackButton,
   TransparentButton,
 } from "../styled-components";
-import data from "../data.json";
 import { Products, Advert } from "../components";
 import { earphonesyx1Mobile, speakerZX9Mobile } from "../assets";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  console.log(data);
-
   return (
     <HomeContainer>
       <section className="section1">

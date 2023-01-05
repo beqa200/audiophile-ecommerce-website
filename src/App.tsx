@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes, useLocation } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Checkout, Details, Category, Home } from "./pages";
 import { GlobalStyles, BlackScreen } from "./styled-components";
 import { Helmet } from "react-helmet";
@@ -12,7 +12,9 @@ function App() {
   const [cart, setCart] = useState<Boolean>(false);
   const [submit, setSubmit] = useState<Boolean>(false);
   const [cartObject, setCartObject] = useState<CartObject[]>([]);
-  let total=0;
+
+  let total = 0;
+
   return (
     <MyContext.Provider
       value={{

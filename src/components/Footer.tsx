@@ -6,22 +6,20 @@ export default function Footer() {
   return (
     <FooterContainer>
       <img src={logo} />
-      <div className="pages" >
-        
-          <Link to="/">
-            <p style={{color: "white"}}>HOME</p>
-          </Link>
-          <Link to="/headphones">
-            <p style={{color: "white"}}> HEADPHONES</p>
-          </Link>
+      <div className="pages">
+        <Link to="/">
+          <p style={{ color: "white" }}>HOME</p>
+        </Link>
+        <Link to="/headphones">
+          <p style={{ color: "white" }}> HEADPHONES</p>
+        </Link>
 
-          <Link to="/speakers">
-            <p style={{color: "white"}}>SPEAKERS</p>
-          </Link>
-          <Link to="/earphones">
-            <p style={{color: "white"}}>EARPHONES</p>
-          </Link>
-        
+        <Link to="/speakers">
+          <p style={{ color: "white" }}>SPEAKERS</p>
+        </Link>
+        <Link to="/earphones">
+          <p style={{ color: "white" }}>EARPHONES</p>
+        </Link>
       </div>
 
       <p className="text">

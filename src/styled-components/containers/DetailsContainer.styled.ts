@@ -57,6 +57,7 @@ const DetailsContainer = styled.div`
   .add-cart {
     display: flex;
     margin-top: 31px;
+
     .quantity {
       display: flex;
       align-items: center;
@@ -117,22 +118,22 @@ const DetailsContainer = styled.div`
     margin-top: 90px;
 
     img {
-        border-radius: 8px;
-        margin-top: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
     }
   }
 
   .others {
     margin-top: 113px;
-    
+
     h2 {
-        text-align: center;
-        margin: 32px 0px;
+      text-align: center;
+      margin: 32px 0px;
     }
 
     button {
-        display: block;
-        margin: 32px auto 56px;
+      display: block;
+      margin: 32px auto 56px;
     }
   }
 
@@ -140,8 +141,8 @@ const DetailsContainer = styled.div`
     margin-top: 172px;
 
     img {
-        max-width: 80px;
-        max-height: 104px;
+      max-width: 80px;
+      max-height: 104px;
     }
   }
 

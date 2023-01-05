@@ -1,7 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MyContext } from "../App";
-import { arrowIcon, earphonesMobile, headphonesMobile, speakersMobile } from "../assets";
+import {
+  arrowIcon,
+  earphonesMobile,
+  headphonesMobile,
+  speakersMobile,
+} from "../assets";
 import { ProductsContainer } from "../styled-components";
 
 export default function Products() {

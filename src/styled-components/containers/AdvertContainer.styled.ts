@@ -6,6 +6,7 @@ const AdvertContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 90%;
+  
   img {
     max-width: 100%;
     border-radius: 8px;

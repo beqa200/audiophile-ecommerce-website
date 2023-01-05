@@ -1,18 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate, Navigate } from "react-router";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { MyContext } from "../App";
-import { Products } from "../components";
 import Ordered from "../components/Ordered";
-import {
-  BlackScreen,
-  CheckoutContainer,
-  OrangeButton,
-} from "../styled-components";
+import { CheckoutContainer, OrangeButton } from "../styled-components";
 
 export default function Checkout() {
   const context = useContext(MyContext);
   const navigate = useNavigate();
+
   const [name, setName] = useState<any>("");
   const [email, setEmail] = useState<any>("");
   const [phone, setPhone] = useState<any>("");
@@ -32,10 +27,11 @@ export default function Checkout() {
   const [countryVal, setCountryVal] = useState(false);
   const [numberVal, setNumberVal] = useState(false);
   const [pinVal, setPinVal] = useState(false);
-  if(context?.total != undefined) {
-    context.total = 0;
 
+  if (context?.total != undefined) {
+    context.total = 0;
   }
+
   useEffect(() => {
     if (context?.cartObject.length == 0) {
       navigate(-1);
@@ -44,9 +40,14 @@ export default function Checkout() {
 
   return (
     <CheckoutContainer>
-      <p className="back" onClick={() => {
-        navigate(-1);
-      }}>Go Back</p>
+      <p
+        className="back"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Go Back
+      </p>
       <form className="checkout">
         <h1>CHECKOUT</h1>
         <div className="billing-details">
@@ -250,11 +251,10 @@ export default function Checkout() {
         <h2>SUMMARY</h2>
         <div className="products">
           {context?.cartObject.map((element) => {
-           
-              if (element.price != undefined) {
-                context.total = context.total + element.price * element.quantity;
-              }
-            
+            if (element.price != undefined) {
+              context.total = context.total + element.price * element.quantity;
+            }
+
             return (
               <div className="prod" key={Math.random()}>
                 <div className="for-flex">
@@ -273,7 +273,10 @@ export default function Checkout() {
         </div>
         <div className="total">
           <p>TOTAL</p>
-          <p className="number">{"$ " + (context?.total != undefined && context?.total.toLocaleString())}</p>
+          <p className="number">
+            {"$ " +
+              (context?.total != undefined && context?.total.toLocaleString())}
+          </p>
         </div>
         <div className="shipping">
           <p>SHIPPING</p>
@@ -284,7 +287,9 @@ export default function Checkout() {
           <p className="number">
             {"$ " +
               (
-                (context?.cartObject != undefined && context.total != undefined) && context.total + 50
+                context?.cartObject != undefined &&
+                context.total != undefined &&
+                context.total + 50
               ).toLocaleString()}
           </p>
         </div>

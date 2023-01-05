@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { MyContext } from "../App";
 import { CartContainer, OrangeButton } from "../styled-components";
 
@@ -9,9 +9,11 @@ export default function Cart() {
   const zero = context?.cartObject.findIndex(
     (element) => element.quantity == 0
   );
+
   if (zero != undefined) {
     context?.cartObject.splice(zero, zero + 1);
   }
+
   return (
     <CartContainer>
       <div className="head">
