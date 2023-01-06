@@ -6,9 +6,18 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: 768px) {
+    padding: 0px 39px;
+    align-items: flex-start;
+  }
+
   img {
     margin-top: 52px;
     margin-top: 48px;
+
+    @media (min-width: 768px) {
+      margin-top: 56px;
+    }
   }
 
   .pages {
@@ -20,6 +29,12 @@ const FooterContainer = styled.footer`
     height: 160px;
     color: white;
     font-weight: 700;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      width: 460px;
+      height: 30px;
+    }
   }
 
   .text,
@@ -32,13 +47,27 @@ const FooterContainer = styled.footer`
     font-size: 15px;
     line-height: 25px;
     opacity: 0.5;
+    margin: 48px auto 0px;
+
+    @media (min-width: 768px) {
+      margin-left: 0px;
+      text-align: start;
+    }
   }
 
-  .icons {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 38px;
+  .for-flex {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .icons {
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0px auto 38px;
+    }
   }
 `;
 

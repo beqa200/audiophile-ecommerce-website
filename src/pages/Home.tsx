@@ -6,7 +6,11 @@ import {
   TransparentButton,
 } from "../styled-components";
 import { Products, Advert } from "../components";
-import { earphonesyx1Mobile, speakerZX9Mobile } from "../assets";
+import {
+  earphonesyx1Mobile,
+  speakerZX9Mobile,
+  speakerZX9Tablet,
+} from "../assets";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -30,7 +34,8 @@ export default function Home() {
       </section>
       <section className="section3">
         <div className="speaker9">
-          <img src={speakerZX9Mobile} />
+          <img className="mobile" src={speakerZX9Mobile} />
+          <img className="tablet" src={speakerZX9Tablet} />
           <h2>ZX9 SPEAKER</h2>
           <p>
             Upgrade to premium speakers that are phenomenally built to deliver

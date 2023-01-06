@@ -10,6 +10,10 @@ const CartContainer = styled.div`
   padding: 32px 29px 31px 28px;
   border-radius: 8px;
 
+  @media (min-width: 768px) {
+    right: 0;
+    margin-right: 46px;
+  }
   p {
     font-size: 15px;
   }

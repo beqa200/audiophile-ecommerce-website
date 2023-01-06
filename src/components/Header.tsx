@@ -23,13 +23,14 @@ export default function Header() {
     <HeaderContainer>
       <img
         src={hamuberIcon}
+        className="hamburger"
         onClick={() => {
           context?.setMenu(!context?.menu);
         }}
       />
-      <img src={logo} />
+      <img src={logo} className="logo" />
 
-      <div className="cart">
+      <div className="cart-logo">
         <img
           src={cartIcon}
           onClick={() => {
@@ -49,6 +50,7 @@ export default function Header() {
       </div>
 
       <div className="menu">{context?.menu && <Products />}</div>
+
       {context?.cart && <Cart />}
     </HeaderContainer>
   );

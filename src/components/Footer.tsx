@@ -29,12 +29,14 @@ export default function Footer() {
         facility - we’re open 7 days a week.
       </p>
 
-      <p className="copyright">Copyright 2021. All Rights Reserved</p>
+      <div className="for-flex">
+        <p className="copyright">Copyright 2021. All Rights Reserved</p>
 
-      <div className="icons">
-        <img src={facebookIcon} />
-        <img src={twitterIcon} />
-        <img src={instagramIcon} />
+        <div className="icons">
+          <img src={facebookIcon} />
+          <img src={twitterIcon} />
+          <img src={instagramIcon} />
+        </div>
       </div>
     </FooterContainer>
   );

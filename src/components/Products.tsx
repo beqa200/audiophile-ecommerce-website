@@ -4,8 +4,11 @@ import { MyContext } from "../App";
 import {
   arrowIcon,
   earphonesMobile,
+  earphonesTablet,
   headphonesMobile,
+  headphonesTablet,
   speakersMobile,
+  speakersTablet,
 } from "../assets";
 import { ProductsContainer } from "../styled-components";
 
@@ -13,17 +16,20 @@ export default function Products() {
   const context = useContext(MyContext);
   const productsArr = [
     {
-      img: headphonesMobile,
+      imgMobile: headphonesMobile,
+      imgTablet: headphonesTablet,
       name: "HEADPHONES",
       link: "/headphones",
     },
     {
-      img: speakersMobile,
+      imgMobile: speakersMobile,
+      imgTablet: speakersTablet,
       name: "SPEAKERS",
       link: "/speakers",
     },
     {
-      img: earphonesMobile,
+      imgMobile: earphonesMobile,
+      imgTablet: earphonesTablet,
       name: "EARPHONES",
       link: "/earphones",
     },
@@ -40,7 +46,8 @@ export default function Products() {
                 context?.setMenu(false);
               }}
             >
-              <img src={product.img} />
+              <img className="mobile" src={product.imgMobile} />
+              <img className="tablet" src={product.imgTablet} />
               <p style={{ color: "black" }}>{product.name}</p>
 
               <div className="forflex">

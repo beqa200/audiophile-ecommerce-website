@@ -1,9 +1,24 @@
 import styled from "styled-components";
 
 const ProductsContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  a {
+    display: block;
+    margin: auto;
+    width: 90%;
+
+    @media (min-width: 768px) {
+      width: 223px;
+    }
+  }
+
   .wrapper {
     background: #f1f1f1;
-    width: 90%;
+    width: 100%;
     height: 165px;
     display: flex;
     flex-direction: column;
@@ -13,6 +28,20 @@ const ProductsContainer = styled.div`
     img {
       max-width: 40%;
       margin-top: -50px;
+    }
+
+    .tablet {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .mobile {
+        display: none;
+      }
+
+      .tablet {
+        display: block;
+      }
     }
 
     p {

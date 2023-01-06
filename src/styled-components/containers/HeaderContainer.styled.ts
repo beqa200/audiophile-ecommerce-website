@@ -11,10 +11,31 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-around;
 
-  .cart {
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
+
+  .hamburger {
+    @media (min-width: 768px) {
+      margin-left: 39px;
+    }
+  }
+
+  .logo {
+    @media (min-width: 768px) {
+      margin-left: 42px;
+    }
+  }
+
+  .cart-logo {
     position: relative;
     cursor: pointer;
 
+    @media (min-width: 768px) {
+      position: absolute;
+      right: 0;
+      margin-right: 39px;
+    }
     .count {
       position: absolute;
       top: -7px;
