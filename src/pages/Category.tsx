@@ -16,7 +16,8 @@ export default function Category() {
         {products?.map((product: Product) => {
           return (
             <div key={product.id}>
-              <img src={product.categoryImage.mobile} />
+              <img className="mobile" src={product.categoryImage.mobile} />
+              <img className="tablet" src={product.categoryImage.tablet} />
               <p className="new">
                 {product.new == true ? "NEW PRODUCT" : null}
               </p>

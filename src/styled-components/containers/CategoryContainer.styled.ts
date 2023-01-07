@@ -18,6 +18,20 @@ const CategoryContainer = styled.div`
         max-width: 100%;
       }
 
+      .tablet {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .mobile {
+          display: none;
+        }
+
+        .tablet {
+          display: block;
+        }
+      }
+
       .new {
         text-align: center;
         margin-top: 32px;
@@ -25,6 +39,10 @@ const CategoryContainer = styled.div`
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 10px;
+
+        @media (min-width: 768px) {
+          margin-top: 52px;
+        }
       }
 
       h2 {
@@ -35,6 +53,10 @@ const CategoryContainer = styled.div`
         font-size: 28px;
         line-height: 38px;
         letter-spacing: 1px;
+
+        @media (min-width: 768px) {
+          font-size: 40px;
+        }
       }
 
       .description {
@@ -45,6 +67,10 @@ const CategoryContainer = styled.div`
         line-height: 25px;
         opacity: 0.5;
         margin-top: 24px;
+
+        @media (min-width: 768px) {
+          width: 572px;
+        }
       }
 
       button {
@@ -55,6 +81,11 @@ const CategoryContainer = styled.div`
 
   .section2 {
     margin-top: 135px;
+
+    @media (min-width: 768px) {
+      width: 90%;
+      margin: 100px auto 0px;
+    }
   }
 
   .section3 {
