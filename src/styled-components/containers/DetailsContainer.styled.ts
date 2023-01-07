@@ -251,6 +251,10 @@ const DetailsContainer = styled.div`
         display: block;
         margin-top: -40px;
       }
+
+      h2{
+        font-size: 40px;
+      }
     }
   }
 `;
