@@ -23,32 +23,53 @@ const CheckoutContainer = styled.div`
       margin-bottom: 32px;
     }
 
-    div {
-      .headname {
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 25px;
-        color: #d87d4a;
-        letter-spacing: 0.928571px;
-        margin-top: 32px;
+    @media (min-width: 768px) {
+      .for-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input, .label {
+          width: 309px;
+        }
       }
 
-      div {
-        p {
-          margin-top: 24px;
-          font-size: 12px;
-          font-weight: 700;
-        }
+      .special {
+        flex-direction: column;
 
-        input {
-          height: 52px;
-          width: calc(100% - 24px);
-          padding-left: 24px;
-          font-size: 14px;
-          margin-top: 9px;
-          border: 1px solid #cfcfcf;
-          border-radius: 8px;
+        .special-inner {
+          display: flex;
+          justify-content: space-between;
         }
+      }
+    }
+    .headname {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 25px;
+      color: #d87d4a;
+      letter-spacing: 0.928571px;
+      margin-top: 32px;
+
+      @media (min-width: 768px) {
+        margin-top: 53px;
+      }
+    }
+
+    div {
+      p {
+        margin-top: 24px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      input {
+        height: 52px;
+        width: calc(100% - 24px);
+        padding-left: 24px;
+        font-size: 14px;
+        margin-top: 9px;
+        border: 1px solid #cfcfcf;
+        border-radius: 8px;
       }
     }
   }
@@ -87,7 +108,6 @@ const CheckoutContainer = styled.div`
   .summary {
     background-color: white;
     width: calc(90% - 57px);
-    max-width: 377px;
     margin: 32px auto 97px;
     padding: 32px 29px 31px 28px;
     border-radius: 8px;

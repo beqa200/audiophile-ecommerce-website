@@ -13,32 +13,34 @@ export default function Ordered() {
       <h1>THANK YOU FOR YOUR ORDER</h1>
       <p className="text">You will receive an email confirmation shortly.</p>
       <div className="ordered-products">
-        <div className="first">
-          <div className="for-flex">
-            <img src={context?.cartObject[0]?.img} />
-            <div className="for-flex-inner">
-              <p className="name">{context?.cartObject[0].name}</p>
-              <p className="price">{"$ " + context?.cartObject[0].price}</p>
-            </div>
-            <div className="quantity">
-              <p>{"x" + context?.cartObject[0].quantity}</p>
+        <div className="product-info">
+          <div className="first">
+            <div className="for-flex">
+              <img src={context?.cartObject[0]?.img} />
+              <div className="for-flex-inner">
+                <p className="name">{context?.cartObject[0].name}</p>
+                <p className="price">{"$ " + context?.cartObject[0].price}</p>
+              </div>
+              <div className="quantity">
+                <p>{"x" + context?.cartObject[0].quantity}</p>
+              </div>
             </div>
           </div>
+          <p
+            className="other"
+            style={
+              context?.cartObject.length != 1
+                ? { borderTop: "1px solid rgba(0, 0, 0, 0.08)" }
+                : { border: "none" }
+            }
+          >
+            {context?.cartObject.length != 1
+              ? "add " +
+                (context?.cartObject && context?.cartObject.length - 1) +
+                " other item(s)"
+              : null}
+          </p>
         </div>
-        <p
-          className="other"
-          style={
-            context?.cartObject.length != 1
-              ? { borderTop: "1px solid rgba(0, 0, 0, 0.08)" }
-              : { border: "none" }
-          }
-        >
-          {context?.cartObject.length != 1
-            ? "add " +
-              (context?.cartObject && context?.cartObject.length - 1) +
-              " other item(s)"
-            : null}
-        </p>
         <div className="grand">
           <p>GRAND TOTAL</p>
           <p className="number">{"$ " + context?.total?.toLocaleString()}</p>

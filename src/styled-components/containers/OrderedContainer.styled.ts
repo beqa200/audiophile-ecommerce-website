@@ -12,12 +12,22 @@ const OrderedContainer = styled.div`
   border-radius: 8px;
   z-index: 2;
 
+  @media (min-width: 768px) {
+    max-width: 470px;
+  }
+
   h1 {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     margin-top: 23px;
     margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      width: 284px;
+      line-height: 36px;
+    }
   }
 
   .text {
@@ -33,6 +43,14 @@ const OrderedContainer = styled.div`
     background-color: #f1f1f1;
     border-radius: 8px;
 
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      .product-info {
+        width: 55%;
+      }
+    }
+
     .first {
       padding: 32px 29px 31px 28px;
 
@@ -44,7 +62,7 @@ const OrderedContainer = styled.div`
       .for-flex {
         display: flex;
         align-items: center;
-
+        width: 100%;
         .for-flex-inner {
           margin-left: 16px;
           font-size: 15px;
@@ -96,6 +114,16 @@ const OrderedContainer = styled.div`
       background-color: black;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
+
+      @media (min-width: 768px) {
+        width: 40%;
+        height: 182px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
       p {
         color: white;
