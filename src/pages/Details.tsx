@@ -49,76 +49,104 @@ export default function Details() {
             Go Back
           </p>
         </Link>
-        <img className="product-image" src={"." + product?.image.mobile} />
-        <p className="new">{product?.new == true ? "NEW PRODUCT" : null}</p>
-        <h2 className="product-name">{product?.name}</h2>
-        <p className="description">{product?.description}</p>
-        <p className="price">{"$ " + product?.price}</p>
-        <div className="add-cart">
-          <div className="quantity">
-            <p
-              onClick={() => {
-                productNum >= 1 && setProductNum(productNum - 1);
-              }}
-            >
-              -
-            </p>
-            <p className="num">{productNum}</p>
-            <p
-              onClick={() => {
-                setProductNum(productNum + 1);
-              }}
-            >
-              +
-            </p>
+        <div className="for-flex">
+          <img
+            className="product-image mobile"
+            src={"." + product?.image.mobile}
+          />
+          <img
+            className="product-image tablet"
+            src={"." + product?.image.tablet}
+          />
+
+          <div className="for-flex-inner">
+            <p className="new">{product?.new == true ? "NEW PRODUCT" : null}</p>
+            <h2 className="product-name">{product?.name}</h2>
+            <p className="description">{product?.description}</p>
+            <p className="price">{"$ " + product?.price}</p>
+            <div className="add-cart">
+              <div className="quantity">
+                <p
+                  onClick={() => {
+                    productNum >= 1 && setProductNum(productNum - 1);
+                  }}
+                >
+                  -
+                </p>
+                <p className="num">{productNum}</p>
+                <p
+                  onClick={() => {
+                    setProductNum(productNum + 1);
+                  }}
+                >
+                  +
+                </p>
+              </div>
+              <OrangeButton
+                onClick={() => {
+                  if (productNum >= 1) {
+                    addCart(productNum);
+                    setProductNum(0);
+                  }
+                }}
+              >
+                ADD TO CART
+              </OrangeButton>
+            </div>
           </div>
-          <OrangeButton
-            onClick={() => {
-              if (productNum >= 1) {
-                addCart(productNum);
-                setProductNum(0);
-              }
-            }}
-          >
-            ADD TO CART
-          </OrangeButton>
         </div>
+
         <div className="features">
           <h2>FEATURES</h2>
           <p>{product?.features}</p>
         </div>
         <div className="equipments">
           <h2>IN THE BOX</h2>
-          {product?.includes.map((include) => {
-            return (
-              <div className="includes" key={Math.random()}>
-                <p className="quantity">{include.quantity + "x"}</p>
-                <p className="item">{include.item}</p>
-              </div>
-            );
-          })}
+          <div>
+            {product?.includes.map((include) => {
+              return (
+                <div className="includes" key={Math.random()}>
+                  <p className="quantity">{include.quantity + "x"}</p>
+                  <p className="item">{include.item}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="gallery">
-          <img src={"." + product?.gallery.first.mobile} />
-          <img src={"." + product?.gallery.second.mobile} />
-          <img src={"." + product?.gallery.third.mobile} />
+          <img className="mobile" src={"." + product?.gallery.first.mobile} />
+          <img className="mobile" src={"." + product?.gallery.second.mobile} />
+          <img className="mobile" src={"." + product?.gallery.third.mobile} />
+
+          <div>
+            <img className="tablet" src={"." + product?.gallery.first.tablet} />
+            <img
+              className="tablet"
+              src={"." + product?.gallery.second.tablet}
+            />
+          </div>
+          <img className="tablet" src={"." + product?.gallery.third.tablet} />
         </div>
         <div className="others">
           <h2>YOU MAY ALSO LIKE</h2>
-          {product?.others.map((other) => {
-            const category = data.find((prod) => prod.slug == other.slug);
 
-            return (
-              <div key={Math.random()}>
-                <img src={"." + other.image.mobile} />
-                <h2>{other.name}</h2>
+          <div className="for-flex">
+            {product?.others.map((other) => {
+              const category = data.find((prod) => prod.slug == other.slug);
 
-                <Link to={"/" + category?.category + "/" + other.slug}>
-                  <OrangeButton>SEE PRODUCT</OrangeButton>
-                </Link>
-              </div>
-            );
-          })}
+              return (
+                <div key={Math.random()}>
+                  <img className="mobile" src={"." + other.image.mobile} />
+                  <img className="tablet" src={"." + other.image.tablet} />
+                  <h2>{other.name}</h2>
+
+                  <Link to={"/" + category?.category + "/" + other.slug}>
+                    <OrangeButton>SEE PRODUCT</OrangeButton>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
       <section className="section2">
