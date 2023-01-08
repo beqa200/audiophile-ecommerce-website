@@ -34,7 +34,8 @@ const DetailsContainer = styled.div`
     margin-top: 24px;
   }
 
-  .tablet {
+  .tablet,
+  .desktop {
     display: none;
   }
 
@@ -54,6 +55,21 @@ const DetailsContainer = styled.div`
 
       .for-flex-inner {
         width: 400px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .for-flex {
+      align-items: center;
+      .tablet {
+        display: none;
+      }
+
+      .desktop {
+        display: block;
+        width: 540px;
+        height: 560px;
       }
     }
   }
@@ -122,8 +138,20 @@ const DetailsContainer = styled.div`
     }
   }
 
+  @media (min-width: 1440px) {
+    .for-flex2 {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+    }
+  }
+
   .features {
     margin-top: 88px;
+
+    @media (min-width: 1440px) {
+      width: 636px;
+    }
 
     h2 {
       @media (min-width: 768px) {
@@ -141,6 +169,12 @@ const DetailsContainer = styled.div`
 
     @media (min-width: 768px) {
       display: flex;
+    }
+
+    @media (min-width: 1440px) {
+      flex-direction: column;
+      margin-top: 88px;
+
     }
 
     h2 {
@@ -190,7 +224,7 @@ const DetailsContainer = styled.div`
       margin-top: 15px;
     }
 
-    .tablet {
+    .tablet, .desktop {
       display: none;
     }
 
@@ -200,6 +234,16 @@ const DetailsContainer = styled.div`
       }
 
       .tablet {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .tablet {
+        display: none;
+      }
+
+      .desktop {
         display: block;
       }
     }
@@ -228,8 +272,10 @@ const DetailsContainer = styled.div`
       margin: 32px 0px;
     }
 
-    button {
+    a {
       display: block;
+      width: 160px;
+      height: 48px;
       margin: 32px auto 56px;
     }
   }
@@ -253,14 +299,14 @@ const DetailsContainer = styled.div`
     div {
       width: 100%;
     }
-    
+
     @media (min-width: 768px) {
       .tablet {
         display: block;
         margin-top: -40px;
       }
 
-      h2{
+      h2 {
         font-size: 40px;
       }
     }
@@ -268,6 +314,10 @@ const DetailsContainer = styled.div`
     @media (min-width: 1440px) {
       .tablet {
         display: none;
+      }
+
+      .desktop {
+        display: block;
       }
     }
   }

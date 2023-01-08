@@ -58,6 +58,10 @@ export default function Details() {
             className="product-image tablet"
             src={"." + product?.image.tablet}
           />
+          <img
+            className="product-image desktop"
+            src={"." + product?.image.desktop}
+          />
 
           <div className="for-flex-inner">
             <p className="new">{product?.new == true ? "NEW PRODUCT" : null}</p>
@@ -96,21 +100,23 @@ export default function Details() {
           </div>
         </div>
 
-        <div className="features">
-          <h2>FEATURES</h2>
-          <p>{product?.features}</p>
-        </div>
-        <div className="equipments">
-          <h2>IN THE BOX</h2>
-          <div>
-            {product?.includes.map((include) => {
-              return (
-                <div className="includes" key={Math.random()}>
-                  <p className="quantity">{include.quantity + "x"}</p>
-                  <p className="item">{include.item}</p>
-                </div>
-              );
-            })}
+        <div className="for-flex2">
+          <div className="features">
+            <h2>FEATURES</h2>
+            <p>{product?.features}</p>
+          </div>
+          <div className="equipments">
+            <h2>IN THE BOX</h2>
+            <div>
+              {product?.includes.map((include) => {
+                return (
+                  <div className="includes" key={Math.random()}>
+                    <p className="quantity">{include.quantity + "x"}</p>
+                    <p className="item">{include.item}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="gallery">
@@ -121,11 +127,21 @@ export default function Details() {
           <div>
             <img className="tablet" src={"." + product?.gallery.first.tablet} />
             <img
+              className="desktop"
+              src={"." + product?.gallery.first.desktop}
+            />
+
+            <img
               className="tablet"
               src={"." + product?.gallery.second.tablet}
             />
+            <img
+              className="desktop"
+              src={"." + product?.gallery.second.desktop}
+            />
           </div>
           <img className="tablet" src={"." + product?.gallery.third.tablet} />
+          <img className="desktop" src={"." + product?.gallery.third.desktop} />
         </div>
         <div className="others">
           <h2>YOU MAY ALSO LIKE</h2>
@@ -138,6 +154,7 @@ export default function Details() {
                 <div key={Math.random()}>
                   <img className="mobile" src={"." + other.image.mobile} />
                   <img className="tablet" src={"." + other.image.tablet} />
+                  <img className="desktop" src={"." + other.image.desktop} />
                   <h2>{other.name}</h2>
 
                   <Link to={"/" + category?.category + "/" + other.slug}>
