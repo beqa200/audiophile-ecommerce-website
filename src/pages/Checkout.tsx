@@ -29,6 +29,9 @@ export default function Checkout() {
   const [countryVal, setCountryVal] = useState(false);
   const [numberVal, setNumberVal] = useState(false);
   const [pinVal, setPinVal] = useState(false);
+  const [paymentVal, setPaymentVal] = useState(false);
+
+  const [checker, setChecker] = useState(true);
 
   if (context?.total != undefined) {
     context.total = 0;
@@ -209,6 +212,7 @@ export default function Checkout() {
                     className="radio-input"
                     onChange={(e) => {
                       setPayment(e.target.value);
+                      setPaymentVal(true);
                     }}
                   />
                   <label>e-Money</label>
@@ -222,6 +226,7 @@ export default function Checkout() {
                     name="payment"
                     onChange={(e) => {
                       setPayment(e.target.value);
+                      setPaymentVal(true);
                     }}
                   />
                   <label>Cash on Delivery</label>
@@ -351,9 +356,11 @@ export default function Checkout() {
                 cityVal == true &&
                 countryVal == true &&
                 numberVal == true &&
-                pinVal == true
+                pinVal == true &&
+                paymentVal == true
               ) {
                 context?.setSubmit(true);
+                setChecker(true);
                 setName("");
                 setEmail("");
                 setPhone("");
@@ -363,11 +370,19 @@ export default function Checkout() {
                 setCountry("");
                 setEmoneyNumber("");
                 setEmoneyPin("");
+              } else {
+                setChecker(false);
               }
             }}
           >
             {payment == "Cash on Delivery" ? "CONTINUE" : "CONTINUE & PAY"}
           </OrangeButton>
+          <p
+            style={checker == true ? { display: "none" } : { display: "block" }}
+            className="wrong"
+          >
+            Something wrong,<br></br> check forms and try again
+          </p>
         </div>
       </div>
       {context?.submit && <Ordered />}

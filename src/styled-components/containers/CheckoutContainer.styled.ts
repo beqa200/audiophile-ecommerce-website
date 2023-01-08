@@ -33,6 +33,7 @@ const CheckoutContainer = styled.div`
     @media (min-width: 1440px) {
       width: 730px;
       margin-left: 165px;
+      margin-bottom: 141px;
     }
 
     h1 {
@@ -87,6 +88,10 @@ const CheckoutContainer = styled.div`
         margin-top: 9px;
         border: 1px solid #cfcfcf;
         border-radius: 8px;
+
+        &:focus {
+          outline: 1px solid #D87D4A;
+        }
       }
     }
   }
@@ -108,6 +113,10 @@ const CheckoutContainer = styled.div`
           max-height: 20px;
           accent-color: #d87d4a;
           padding: 20px;
+
+          &:focus {
+            outline: none;
+          }
         }
 
         label {
@@ -255,6 +264,11 @@ const CheckoutContainer = styled.div`
     button {
       width: 100%;
       margin-top: 24px;
+    }
+
+    .wrong {
+      color: #D87D4A;
+      margin-top: 5px;
     }
   }
 `;
