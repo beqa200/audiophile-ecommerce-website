@@ -122,6 +122,26 @@ const CheckoutContainer = styled.div`
     }
   }
 
+  .additional {
+    align-items: start;
+    justify-content: space-between;
+
+    img {
+      width: 48px;
+      height: 48px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 15px;
+      color: black;
+      opacity: 0.5;
+      line-height: 25px;
+      max-width: 554px;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+  }
   .summary {
     background-color: white;
     width: calc(90% - 57px);

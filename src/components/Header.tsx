@@ -39,13 +39,13 @@ export default function Header() {
           <Link to={"/earphones"}>EARPHONES</Link>
         </div>
 
-        <div className="cart-logo">
-          <img
-            src={cartIcon}
-            onClick={() => {
-              context?.setCart(!context?.cart);
-            }}
-          />
+        <div
+          className="cart-logo"
+          onClick={() => {
+            context?.setCart(!context?.cart);
+          }}
+        >
+          <img src={cartIcon} />
           <p
             style={
               context?.cartObject.length != 0

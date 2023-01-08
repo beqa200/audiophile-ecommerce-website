@@ -6,6 +6,7 @@ export { default as instagramIcon } from "./icons/icon-instagram.svg";
 export { default as facebookIcon } from "./icons/icon-facebook.svg";
 export { default as twitterIcon } from "./icons/icon-twitter.svg";
 export { default as orderIcon } from "./icons/icon-order-confirmation.svg";
+export { default as cashIcon } from "./icons/icon-cash-on-delivery.svg";
 export { default as circlePattern } from "./icons/pattern-circles.svg";
 export { default as imageHeaderMobile } from "./home/mobile/image-header.jpg";
 export { default as imageHeaderTablet } from "./home/tablet/image-header.jpg";
@@ -31,4 +32,3 @@ export { default as earphonesyx1Desktop } from "./home/desktop/image-earphones-y
 export { default as gearMobile } from "./shared/mobile/image-best-gear.jpg";
 export { default as gearTablet } from "./shared/tablet/image-best-gear.jpg";
 export { default as gearDesktop } from "./shared/desktop/image-best-gear.jpg";
-

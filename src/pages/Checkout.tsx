@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { MyContext } from "../App";
+import { cashIcon } from "../assets";
 import Ordered from "../components/Ordered";
 import { CheckoutContainer, OrangeButton } from "../styled-components";
 
@@ -17,7 +18,8 @@ export default function Checkout() {
   const [country, setCountry] = useState<any>("");
   const [emoneyNumber, setEmoneyNumber] = useState<any>("");
   const [emoneyPin, setEmoneyPin] = useState<any>("");
-
+  const [payment, setPayment] = useState<any>("");
+  console.log(payment);
   const [nameVal, setNameVal] = useState(false);
   const [emailVal, setEmailVal] = useState(false);
   const [phoneVal, setPhoneVal] = useState(false);
@@ -205,8 +207,9 @@ export default function Checkout() {
                     name="payment"
                     value="e-money"
                     className="radio-input"
-                    checked
-                    readOnly
+                    onChange={(e) => {
+                      setPayment(e.target.value);
+                    }}
                   />
                   <label>e-Money</label>
                 </div>
@@ -217,6 +220,9 @@ export default function Checkout() {
                     value="Cash on Delivery"
                     className="radio-input"
                     name="payment"
+                    onChange={(e) => {
+                      setPayment(e.target.value);
+                    }}
                   />
                   <label>Cash on Delivery</label>
                 </div>
@@ -269,6 +275,21 @@ export default function Checkout() {
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            className="additional"
+            style={
+              payment == "Cash on Delivery"
+                ? { display: "flex" }
+                : { display: "none" }
+            }
+          >
+            <img src={cashIcon} />
+            <p>
+              The ‘Cash on Delivery’ option enables you to pay in cash when our
+              delivery courier arrives at your residence. Just make sure your
+              address is correct so that your order will not be cancelled.
+            </p>
           </div>
         </form>
         <div className="summary">
@@ -345,7 +366,7 @@ export default function Checkout() {
               }
             }}
           >
-            CONTINUE & PAY
+            {payment == "Cash on Delivery" ? "CONTINUE" : "CONTINUE & PAY"}
           </OrangeButton>
         </div>
       </div>
