@@ -37,6 +37,12 @@ const CartContainer = styled.div`
     border-top: 1px solid #cfcfcf;
     border-bottom: 1px solid #cfcfcf;
 
+    @media (min-width: 1440px) {
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+    }
+
     .prod {
       display: flex;
       justify-content: space-between;

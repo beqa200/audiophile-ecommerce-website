@@ -2,6 +2,13 @@ import styled from "styled-components";
 
 const CheckoutContainer = styled.div`
   position: relative;
+
+  .for-flex {
+    @media (min-width: 1440px) {
+      display: flex;
+    }
+  }
+
   .back {
     color: black;
     opacity: 0.7;
@@ -10,6 +17,10 @@ const CheckoutContainer = styled.div`
     margin: 16px auto 0px;
     width: 90%;
     cursor: pointer;
+
+    @media (min-width: 1440px) {
+      margin-left: 165px;
+    }
   }
 
   .checkout {
@@ -18,6 +29,11 @@ const CheckoutContainer = styled.div`
     padding: 24px;
     background-color: white;
     border-radius: 8px;
+
+    @media (min-width: 1440px) {
+      width: 730px;
+      margin-left: 165px;
+    }
 
     h1 {
       margin-bottom: 32px;
@@ -28,7 +44,8 @@ const CheckoutContainer = styled.div`
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        input, .label {
+        input,
+        .label {
           width: 309px;
         }
       }
@@ -111,6 +128,11 @@ const CheckoutContainer = styled.div`
     margin: 32px auto 97px;
     padding: 32px 29px 31px 28px;
     border-radius: 8px;
+    height: fit-content;
+    @media (min-width: 1440px) {
+      width: 350px;
+      margin-top: 24px;
+    }
 
     p {
       font-size: 15px;
@@ -134,6 +156,11 @@ const CheckoutContainer = styled.div`
       overflow-y: auto;
       border-top: 1px solid #cfcfcf;
       border-bottom: 1px solid #cfcfcf;
+      @media (min-width: 1440px) {
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+      }
 
       .prod {
         display: flex;
