@@ -29,9 +29,8 @@ const CheckoutContainer = styled.div`
     padding: 24px;
     background-color: white;
     border-radius: 8px;
-
+    max-width: 730px;
     @media (min-width: 1440px) {
-      width: 730px;
       margin-left: 165px;
       margin-bottom: 141px;
     }
@@ -90,7 +89,7 @@ const CheckoutContainer = styled.div`
         border-radius: 8px;
 
         &:focus {
-          outline: 1px solid #D87D4A;
+          outline: 1px solid #d87d4a;
         }
       }
     }
@@ -154,6 +153,7 @@ const CheckoutContainer = styled.div`
   .summary {
     background-color: white;
     width: calc(90% - 57px);
+    max-width: 730px;
     margin: 32px auto 97px;
     padding: 32px 29px 31px 28px;
     border-radius: 8px;
@@ -267,7 +267,7 @@ const CheckoutContainer = styled.div`
     }
 
     .wrong {
-      color: #D87D4A;
+      color: #d87d4a;
       margin-top: 5px;
     }
   }

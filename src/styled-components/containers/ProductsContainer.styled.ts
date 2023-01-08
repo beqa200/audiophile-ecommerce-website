@@ -31,7 +31,8 @@ const ProductsContainer = styled.div`
     margin: 68px auto;
 
     @media (min-width: 1440px) {
-      height: 190px;
+      height: 190px
+
     }
 
     img {

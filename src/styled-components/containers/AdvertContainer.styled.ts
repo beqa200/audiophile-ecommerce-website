@@ -7,6 +7,12 @@ const AdvertContainer = styled.div`
   align-items: center;
   width: 90%;
 
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   @media (min-width: 1440px) {
     width: 80%;
   }

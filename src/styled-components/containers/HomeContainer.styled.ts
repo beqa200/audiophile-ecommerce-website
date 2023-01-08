@@ -355,7 +355,7 @@ const HomeContainer = styled.div`
 
   .section4 {
     width: 100%;
-    margin: 300px auto;
+    margin: 120px auto 96px;
   }
 `;
 

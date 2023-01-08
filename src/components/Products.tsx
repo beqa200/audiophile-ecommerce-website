@@ -11,7 +11,7 @@ import {
   speakersMobile,
   speakersTablet,
   speakersDesktop,
-  earphonesDesktop
+  earphonesDesktop,
 } from "../assets";
 import { ProductsContainer } from "../styled-components";
 
@@ -55,6 +55,7 @@ export default function Products() {
               <img className="mobile" src={product.imgMobile} />
               <img className="tablet" src={product.imgTablet} />
               <img className="desktop" src={product.imgDesktop} />
+
               <p style={{ color: "black" }}>{product.name}</p>
 
               <div className="forflex">
