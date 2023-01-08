@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <HeaderContainer>
-      <div className="for-flex">
+      <div className="for-flex-header">
         <img
           src={hamuberIcon}
           className="hamburger"
@@ -33,7 +33,7 @@ export default function Header() {
         <img src={logo} className="logo" />
 
         <div className="desktop-menu">
-          <Link to={"/category"}>HOME</Link>
+          <Link to={"/"}>HOME</Link>
           <Link to={"/headphones"}>HEADPHONES</Link>
           <Link to={"/speakers"}>SPEAKERS</Link>
           <Link to={"/earphones"}>EARPHONES</Link>

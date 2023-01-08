@@ -3,15 +3,15 @@ import { imageHeaderDesktop } from "../../assets";
 
 const HeaderContainer = styled.header`
   background-color: black;
-
+  position: relative;
+  z-index: 2;
   @media (min-width: 1440px) {
     background-image: url(${imageHeaderDesktop}),
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
 
-  .for-flex {
+  .for-flex-header {
     position: relative;
-    z-index: 2;
     width: 100%;
     height: 75px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);

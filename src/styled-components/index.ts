@@ -14,3 +14,4 @@ export { default as DetailsContainer } from "./containers/DetailsContainer.style
 export { default as CartContainer } from "./containers/CartContainer.styled";
 export { default as CheckoutContainer } from "./containers/CheckoutContainer.styled";
 export { default as OrderedContainer } from "./containers/OrderedContainer.styled";
+export { default as Product } from "./components/Product.styled";
