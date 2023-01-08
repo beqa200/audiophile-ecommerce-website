@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { MyContext } from "../App";
 import { cartIcon, hamuberIcon, logo } from "../assets";
 import HeaderContainer from "../styled-components/containers/HeaderContainer.styled";
@@ -32,10 +33,10 @@ export default function Header() {
         <img src={logo} className="logo" />
 
         <div className="desktop-menu">
-          <p>HOME</p>
-          <p>HEADPHONES</p>
-          <p>SPEAKERS</p>
-          <p>EARPHONES</p>
+          <Link to={"/category"}>HOME</Link>
+          <Link to={"/headphones"}>HEADPHONES</Link>
+          <Link to={"/speakers"}>SPEAKERS</Link>
+          <Link to={"/earphones"}>EARPHONES</Link>
         </div>
 
         <div className="cart-logo">

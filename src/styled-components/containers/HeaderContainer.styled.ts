@@ -41,7 +41,7 @@ const HeaderContainer = styled.header`
         width: 500px;
         margin-left: 15%;
 
-        p {
+        a {
           color: white;
           cursor: pointer;
           font-weight: 700;
