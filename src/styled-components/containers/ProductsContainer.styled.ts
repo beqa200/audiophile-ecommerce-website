@@ -4,6 +4,7 @@ const ProductsContainer = styled.div`
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   a {
@@ -13,6 +14,10 @@ const ProductsContainer = styled.div`
 
     @media (min-width: 768px) {
       width: 223px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 350px;
     }
   }
 
@@ -30,7 +35,8 @@ const ProductsContainer = styled.div`
       margin-top: -50px;
     }
 
-    .tablet {
+    .tablet,
+    .desktop {
       display: none;
     }
 
@@ -40,6 +46,16 @@ const ProductsContainer = styled.div`
       }
 
       .tablet {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .tablet {
+        display: none;
+      }
+
+      .desktop {
         display: block;
       }
     }

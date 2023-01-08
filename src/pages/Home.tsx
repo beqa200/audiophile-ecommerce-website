@@ -7,7 +7,12 @@ import {
 } from "../styled-components";
 import { Products, Advert } from "../components";
 import {
+  earphonesDesktop,
+  earphonesTablet,
+  earphonesyx1Desktop,
   earphonesyx1Mobile,
+  earphonesyx1Tablet,
+  speakerZX9Desktop,
   speakerZX9Mobile,
   speakerZX9Tablet,
 } from "../assets";
@@ -36,14 +41,17 @@ export default function Home() {
         <div className="speaker9">
           <img className="mobile" src={speakerZX9Mobile} />
           <img className="tablet" src={speakerZX9Tablet} />
-          <h2>ZX9 SPEAKER</h2>
-          <p>
-            Upgrade to premium speakers that are phenomenally built to deliver
-            truly remarkable sound.
-          </p>
-          <Link to="/speakers/zx9-speaker">
-            <BlackButton>SEE PRODUCT</BlackButton>
-          </Link>
+          <img className="desktop" src={speakerZX9Desktop} />
+          <div className="for-flex">
+            <h2>ZX9 SPEAKER</h2>
+            <p>
+              Upgrade to premium speakers that are phenomenally built to deliver
+              truly remarkable sound.
+            </p>
+            <Link to="/speakers/zx9-speaker">
+              <BlackButton>SEE PRODUCT</BlackButton>
+            </Link>
+          </div>
         </div>
         <div className="speaker7">
           <h2>ZX7 SPEAKER</h2>
@@ -52,8 +60,9 @@ export default function Home() {
           </Link>
         </div>
         <div className="earphones">
-          <img src={earphonesyx1Mobile} />
-
+          <img className="mobile" src={earphonesyx1Mobile} />
+          <img className="tablet" src={earphonesyx1Tablet} />
+          <img className="desktop" src={earphonesyx1Desktop} />
           <div>
             <h2>YX1 EARPHONES</h2>
             <Link to="/earphones/yx1-earphones">

@@ -7,12 +7,17 @@ const AdvertContainer = styled.div`
   align-items: center;
   width: 90%;
 
+  @media (min-width: 1440px) {
+    width: 80%;
+  }
+
   img {
     max-width: 100%;
     border-radius: 8px;
   }
 
-  .tablet {
+  .tablet,
+  .desktop {
     display: none;
   }
 
@@ -22,6 +27,18 @@ const AdvertContainer = styled.div`
     }
 
     .tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .tablet {
+      display: none;
+    }
+
+    .desktop {
       display: block;
     }
   }
@@ -40,6 +57,10 @@ const AdvertContainer = styled.div`
       width: 573px;
       line-height: 44px;
     }
+
+    @media (min-width: 1440px) {
+      text-align: start;
+    }
   }
 
   p {
@@ -52,6 +73,10 @@ const AdvertContainer = styled.div`
 
     @media (min-width: 768px) {
       width: 573px;
+    }
+
+    @media (min-width: 1440px) {
+      text-align: start;
     }
   }
 `;

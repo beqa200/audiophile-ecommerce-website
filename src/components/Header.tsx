@@ -21,37 +21,46 @@ export default function Header() {
 
   return (
     <HeaderContainer>
-      <img
-        src={hamuberIcon}
-        className="hamburger"
-        onClick={() => {
-          context?.setMenu(!context?.menu);
-        }}
-      />
-      <img src={logo} className="logo" />
-
-      <div className="cart-logo">
+      <div className="for-flex">
         <img
-          src={cartIcon}
+          src={hamuberIcon}
+          className="hamburger"
           onClick={() => {
-            context?.setCart(!context?.cart);
+            context?.setMenu(!context?.menu);
           }}
         />
-        <p
-          style={
-            context?.cartObject.length != 0
-              ? { display: "flex" }
-              : { display: "none" }
-          }
-          className="count"
-        >
-          {context?.cartObject.length}
-        </p>
+        <img src={logo} className="logo" />
+
+        <div className="desktop-menu">
+          <p>HOME</p>
+          <p>HEADPHONES</p>
+          <p>SPEAKERS</p>
+          <p>EARPHONES</p>
+        </div>
+
+        <div className="cart-logo">
+          <img
+            src={cartIcon}
+            onClick={() => {
+              context?.setCart(!context?.cart);
+            }}
+          />
+          <p
+            style={
+              context?.cartObject.length != 0
+                ? { display: "flex" }
+                : { display: "none" }
+            }
+            className="count"
+          >
+            {context?.cartObject.length}
+          </p>
+        </div>
+
+        <div className="menu">{context?.menu && <Products />}</div>
+
+        {context?.cart && <Cart />}
       </div>
-
-      <div className="menu">{context?.menu && <Products />}</div>
-
-      {context?.cart && <Cart />}
     </HeaderContainer>
   );
 }

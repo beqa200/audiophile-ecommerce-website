@@ -4,6 +4,10 @@ const DetailsContainer = styled.div`
   width: 90%;
   margin: auto;
 
+  @media (min-width: 1440px) {
+    width: 80%;
+  }
+
   p {
     color: black;
     opacity: 0.7;
@@ -246,6 +250,10 @@ const DetailsContainer = styled.div`
   .section3 {
     margin: 120px 0px;
 
+    div {
+      width: 100%;
+    }
+    
     @media (min-width: 768px) {
       .tablet {
         display: block;
@@ -254,6 +262,12 @@ const DetailsContainer = styled.div`
 
       h2{
         font-size: 40px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .tablet {
+        display: none;
       }
     }
   }

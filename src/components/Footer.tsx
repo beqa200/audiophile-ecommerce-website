@@ -5,6 +5,7 @@ import { FooterContainer } from "../styled-components";
 export default function Footer() {
   return (
     <FooterContainer>
+      <div className="for-flex">
       <img src={logo} />
       <div className="pages">
         <Link to="/">
@@ -21,7 +22,7 @@ export default function Footer() {
           <p style={{ color: "white" }}>EARPHONES</p>
         </Link>
       </div>
-
+      </div>
       <p className="text">
         Audiophile is an all in one stop to fulfill your audio needs. We're a
         small team of music lovers and sound specialists who are devoted to
@@ -29,7 +30,7 @@ export default function Footer() {
         facility - we’re open 7 days a week.
       </p>
 
-      <div className="for-flex">
+      <div className="for-flex2">
         <p className="copyright">Copyright 2021. All Rights Reserved</p>
 
         <div className="icons">

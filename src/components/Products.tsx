@@ -5,10 +5,13 @@ import {
   arrowIcon,
   earphonesMobile,
   earphonesTablet,
+  headphonesDesktop,
   headphonesMobile,
   headphonesTablet,
   speakersMobile,
   speakersTablet,
+  speakersDesktop,
+  earphonesDesktop
 } from "../assets";
 import { ProductsContainer } from "../styled-components";
 
@@ -18,18 +21,21 @@ export default function Products() {
     {
       imgMobile: headphonesMobile,
       imgTablet: headphonesTablet,
+      imgDesktop: headphonesDesktop,
       name: "HEADPHONES",
       link: "/headphones",
     },
     {
       imgMobile: speakersMobile,
       imgTablet: speakersTablet,
+      imgDesktop: speakersDesktop,
       name: "SPEAKERS",
       link: "/speakers",
     },
     {
       imgMobile: earphonesMobile,
       imgTablet: earphonesTablet,
+      imgDesktop: earphonesDesktop,
       name: "EARPHONES",
       link: "/earphones",
     },
@@ -48,6 +54,7 @@ export default function Products() {
             >
               <img className="mobile" src={product.imgMobile} />
               <img className="tablet" src={product.imgTablet} />
+              <img className="desktop" src={product.imgDesktop} />
               <p style={{ color: "black" }}>{product.name}</p>
 
               <div className="forflex">
