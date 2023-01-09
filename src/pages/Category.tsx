@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Advert, Products } from "../components";
 import data from "../data.json";
 import { CategoryContainer, OrangeButton, Product } from "../styled-components";
+
 export default function Category() {
   const params = useParams();
   const products: Product[] | undefined = data.filter(

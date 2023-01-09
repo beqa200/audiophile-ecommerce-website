@@ -90,6 +90,7 @@ const HomeContainer = styled.div`
       @media (min-width: 768px) {
         width: 349px;
       }
+
       @media (min-width: 1440px) {
         text-align: start;
         margin: 0px;
@@ -265,6 +266,7 @@ const HomeContainer = styled.div`
         letter-spacing: 2px;
         margin-left: 20px;
         margin-bottom: 35px;
+        
         @media (min-width: 1440px) {
           margin-left: 110px;
         }

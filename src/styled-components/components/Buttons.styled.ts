@@ -39,8 +39,8 @@ export const TransparentButton = styled(Button)`
   color: black;
 
   &:hover {
-      background-color: black;
-      transition: 0.3s;
-      color: white;
-    }
+    background-color: black;
+    transition: 0.3s;
+    color: white;
+  }
 `;

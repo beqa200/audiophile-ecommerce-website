@@ -79,10 +79,12 @@ const CategoryContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+
         @media (min-width: 1440px) {
           width: 450px;
           align-items: start;
         }
+
         .new {
           text-align: center;
           margin-top: 32px;

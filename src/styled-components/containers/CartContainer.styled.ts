@@ -14,6 +14,7 @@ const CartContainer = styled.div`
     right: 0;
     margin-right: 46px;
   }
+
   p {
     font-size: 15px;
   }

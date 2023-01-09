@@ -40,6 +40,7 @@ const AdvertContainer = styled.div`
   @media (min-width: 1440px) {
     flex-direction: row-reverse;
     justify-content: space-between;
+
     .tablet {
       display: none;
     }

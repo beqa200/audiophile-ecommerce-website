@@ -5,6 +5,7 @@ import data from "../data.json";
 import { Advert, Products } from "../components";
 import { Link } from "react-router-dom";
 import { MyContext } from "../App";
+
 export default function Details() {
   const params = useParams();
   const navigate = useNavigate();

@@ -52,6 +52,7 @@ const DetailsContainer = styled.div`
     .for-flex {
       display: flex;
       justify-content: space-between;
+
       .mobile {
         display: none;
       }
@@ -71,6 +72,7 @@ const DetailsContainer = styled.div`
   @media (min-width: 1440px) {
     .for-flex {
       align-items: center;
+
       .tablet {
         display: none;
       }

@@ -31,6 +31,7 @@ const FooterContainer = styled.footer`
       margin-top: 48px;
       width: 143px;
       height: 25px;
+
       @media (min-width: 768px) {
         margin-top: 56px;
       }

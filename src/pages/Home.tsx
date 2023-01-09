@@ -7,8 +7,6 @@ import {
 } from "../styled-components";
 import { Products, Advert } from "../components";
 import {
-  earphonesDesktop,
-  earphonesTablet,
   earphonesyx1Desktop,
   earphonesyx1Mobile,
   earphonesyx1Tablet,

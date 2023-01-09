@@ -9,16 +9,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0px;
 }
 
-
-
 body {
     width: 100vw;
     overflow-x: hidden;
     background-color: #FAFAFA;
 }
-
-
-    
 
 button {
     cursor: pointer;

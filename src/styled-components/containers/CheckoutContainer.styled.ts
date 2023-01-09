@@ -36,6 +36,7 @@ const CheckoutContainer = styled.div`
     background-color: white;
     border-radius: 8px;
     max-width: 730px;
+
     @media (min-width: 1440px) {
       margin-left: 165px;
       margin-bottom: 141px;
@@ -50,6 +51,7 @@ const CheckoutContainer = styled.div`
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
         input,
         .label {
           width: 309px;
@@ -156,6 +158,7 @@ const CheckoutContainer = styled.div`
       margin-top: 30px;
     }
   }
+
   .summary {
     background-color: white;
     width: calc(90% - 57px);
@@ -192,6 +195,7 @@ const CheckoutContainer = styled.div`
       overflow-y: auto;
       border-top: 1px solid #cfcfcf;
       border-bottom: 1px solid #cfcfcf;
+
       @media (min-width: 1440px) {
         ::-webkit-scrollbar {
           width: 10px;
@@ -229,6 +233,7 @@ const CheckoutContainer = styled.div`
             }
           }
         }
+
         .quantity {
           p {
             color: black;

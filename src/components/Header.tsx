@@ -5,6 +5,7 @@ import { cartIcon, hamuberIcon, logo } from "../assets";
 import HeaderContainer from "../styled-components/containers/HeaderContainer.styled";
 import Cart from "./Cart";
 import Products from "./Products";
+
 export default function Header() {
   const context = useContext(MyContext);
 

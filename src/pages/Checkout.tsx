@@ -19,7 +19,7 @@ export default function Checkout() {
   const [emoneyNumber, setEmoneyNumber] = useState<any>("");
   const [emoneyPin, setEmoneyPin] = useState<any>("");
   const [payment, setPayment] = useState<any>("");
-  console.log(payment);
+
   const [nameVal, setNameVal] = useState(false);
   const [emailVal, setEmailVal] = useState(false);
   const [phoneVal, setPhoneVal] = useState(false);

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { facebookIcon, instagramIcon, logo, twitterIcon } from "../assets";
 import { FooterContainer } from "../styled-components";
+
 export default function Footer() {
   return (
     <FooterContainer>

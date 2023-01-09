@@ -13,6 +13,7 @@ const ProductsContainer = styled.div`
     width: 90%;
     height: 165px;
     margin: 68px auto;
+    
     @media (min-width: 768px) {
       width: 223px;
     }

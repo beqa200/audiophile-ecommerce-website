@@ -5,6 +5,7 @@ const HeaderContainer = styled.header`
   background-color: black;
   position: relative;
   z-index: 2;
+
   @media (min-width: 1440px) {
     background-image: url(${imageHeaderDesktop}),
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -84,6 +85,7 @@ const HeaderContainer = styled.header`
         right: 0;
         margin-right: 39px;
       }
+
       img {
         @media (min-width: 1440px) {
           &:hover {

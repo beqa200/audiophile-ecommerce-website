@@ -1,6 +1,7 @@
 import React from "react";
 import { gearDesktop, gearMobile, gearTablet } from "../assets";
 import { AdvertContainer } from "../styled-components";
+
 export default function Advert() {
   return (
     <AdvertContainer>

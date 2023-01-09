@@ -46,6 +46,7 @@ const OrderedContainer = styled.div`
     @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
+
       .product-info {
         width: 55%;
       }
@@ -63,6 +64,7 @@ const OrderedContainer = styled.div`
         display: flex;
         align-items: center;
         width: 100%;
+
         .for-flex-inner {
           margin-left: 16px;
           font-size: 15px;
