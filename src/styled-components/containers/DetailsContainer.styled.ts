@@ -28,6 +28,15 @@ const DetailsContainer = styled.div`
 
   .back {
     margin-top: 15px;
+    width: 57px;
+    cursor: pointer;
+
+    @media (min-width: 1440px) {
+      &:hover {
+        color: #d87d4a;
+        transition: 0.3s;
+      }
+    }
   }
 
   .product-image {
@@ -127,6 +136,15 @@ const DetailsContainer = styled.div`
         cursor: pointer;
       }
 
+      .for-hover {
+        @media (min-width: 1440px) {
+          &:hover {
+            color: #d87d4a;
+            transition: 0.3s;
+          }
+        }
+      }
+
       .num {
         opacity: 1;
         cursor: text;
@@ -174,7 +192,6 @@ const DetailsContainer = styled.div`
     @media (min-width: 1440px) {
       flex-direction: column;
       margin-top: 88px;
-
     }
 
     h2 {
@@ -224,7 +241,8 @@ const DetailsContainer = styled.div`
       margin-top: 15px;
     }
 
-    .tablet, .desktop {
+    .tablet,
+    .desktop {
       display: none;
     }
 

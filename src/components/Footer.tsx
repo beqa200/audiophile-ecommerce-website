@@ -6,22 +6,22 @@ export default function Footer() {
   return (
     <FooterContainer>
       <div className="for-flex">
-      <img src={logo} />
-      <div className="pages">
-        <Link to="/">
-          <p style={{ color: "white" }}>HOME</p>
-        </Link>
-        <Link to="/headphones">
-          <p style={{ color: "white" }}> HEADPHONES</p>
-        </Link>
+        <img src={logo} />
+        <div className="pages">
+          <Link to="/">
+            <p>HOME</p>
+          </Link>
+          <Link to="/headphones">
+            <p> HEADPHONES</p>
+          </Link>
 
-        <Link to="/speakers">
-          <p style={{ color: "white" }}>SPEAKERS</p>
-        </Link>
-        <Link to="/earphones">
-          <p style={{ color: "white" }}>EARPHONES</p>
-        </Link>
-      </div>
+          <Link to="/speakers">
+            <p>SPEAKERS</p>
+          </Link>
+          <Link to="/earphones">
+            <p>EARPHONES</p>
+          </Link>
+        </div>
       </div>
       <p className="text">
         Audiophile is an all in one stop to fulfill your audio needs. We're a

@@ -38,17 +38,16 @@ export default function Details() {
   return product !== undefined ? (
     <DetailsContainer>
       <section className="section1">
-        <Link to={"/" + product?.category}>
-          <p
-            className="back"
-            onClick={() => {
-              navigate(-1);
-            }}
-          >
-            {" "}
-            Go Back
-          </p>
-        </Link>
+        <p
+          className="back"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          {" "}
+          Go Back
+        </p>
+
         <div className="for-flex">
           <img
             className="product-image mobile"
@@ -74,6 +73,7 @@ export default function Details() {
                   onClick={() => {
                     productNum >= 1 && setProductNum(productNum - 1);
                   }}
+                  className="for-hover"
                 >
                   -
                 </p>
@@ -82,6 +82,7 @@ export default function Details() {
                   onClick={() => {
                     setProductNum(productNum + 1);
                   }}
+                  className="for-hover"
                 >
                   +
                 </p>

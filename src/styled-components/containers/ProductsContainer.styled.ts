@@ -11,13 +11,15 @@ const ProductsContainer = styled.div`
     display: block;
     margin: auto;
     width: 90%;
-
+    height: 165px;
+    margin: 68px auto;
     @media (min-width: 768px) {
       width: 223px;
     }
 
     @media (min-width: 1440px) {
       width: 350px;
+      height: 190px;
     }
   }
 
@@ -28,11 +30,13 @@ const ProductsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 68px auto;
 
     @media (min-width: 1440px) {
-      height: 190px
+      height: 190px;
 
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     img {

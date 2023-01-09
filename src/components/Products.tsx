@@ -59,7 +59,7 @@ export default function Products() {
               <p style={{ color: "black" }}>{product.name}</p>
 
               <div className="forflex">
-                <p>SHOP</p>
+                <p className="for-hover">SHOP</p>
                 <img src={arrowIcon} />
               </div>
             </div>

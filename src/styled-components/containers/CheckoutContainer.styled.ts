@@ -17,9 +17,15 @@ const CheckoutContainer = styled.div`
     margin: 16px auto 0px;
     width: 90%;
     cursor: pointer;
+    width: 57px;
 
     @media (min-width: 1440px) {
       margin-left: 165px;
+
+      &:hover {
+        color: #d87d4a;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -158,6 +164,7 @@ const CheckoutContainer = styled.div`
     padding: 32px 29px 31px 28px;
     border-radius: 8px;
     height: fit-content;
+
     @media (min-width: 1440px) {
       width: 350px;
       margin-top: 24px;
@@ -269,6 +276,7 @@ const CheckoutContainer = styled.div`
     .wrong {
       color: #d87d4a;
       margin-top: 5px;
+      font-size: 13px;
     }
   }
 `;

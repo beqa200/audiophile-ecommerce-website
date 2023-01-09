@@ -46,6 +46,11 @@ const HeaderContainer = styled.header`
           cursor: pointer;
           font-weight: 700;
           font-size: 13px;
+
+          &:hover {
+            color: #d87d4a;
+            transition: 0.3s;
+          }
         }
       }
     }
@@ -79,6 +84,16 @@ const HeaderContainer = styled.header`
         right: 0;
         margin-right: 39px;
       }
+      img {
+        @media (min-width: 1440px) {
+          &:hover {
+            filter: invert(56%) sepia(39%) saturate(834%) hue-rotate(336deg)
+              brightness(95%) contrast(77%);
+            transition: 0.3s;
+          }
+        }
+      }
+
       .count {
         position: absolute;
         top: -7px;

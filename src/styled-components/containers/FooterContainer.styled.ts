@@ -6,8 +6,6 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
 
-  
-
   @media (min-width: 768px) {
     padding: 0px 39px;
     align-items: flex-start;
@@ -19,7 +17,7 @@ const FooterContainer = styled.footer`
 
   .for-flex {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 
     @media (min-width: 1440px) {
       width: 100%;
@@ -27,39 +25,45 @@ const FooterContainer = styled.footer`
       justify-content: space-between;
       align-items: center;
     }
-  
+
     img {
-    margin-top: 52px;
-    margin-top: 48px;
-    width: 143px;
-    height: 25px;
-    @media (min-width: 768px) {
-      margin-top: 56px;
-    }
-  }
-
-  .pages {
-    margin-top: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 160px;
-    color: white;
-    font-weight: 700;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-      width: 460px;
-      height: 30px;
+      margin-top: 52px;
+      margin-top: 48px;
+      width: 143px;
+      height: 25px;
+      @media (min-width: 768px) {
+        margin-top: 56px;
+      }
     }
 
-    @media (min-width: 1440px) {
+    .pages {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 160px;
+      color: white;
+      font-weight: 700;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        width: 460px;
+        height: 30px;
+      }
+
+      a {
+        color: white;
+
+        @media (min-width: 1440px) {
+          &:hover {
+            color: #d87d4a;
+            transition: 0.3s;
+          }
+        }
+      }
     }
   }
-  }
-
-  
 
   .text,
   .copyright {
@@ -103,14 +107,20 @@ const FooterContainer = styled.footer`
       margin: 50px auto 38px;
 
       @media (min-width: 1440px) {
-      margin-top: -50px;
+        margin-top: -50px;
 
-      img {
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
+        img {
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+
+          &:hover {
+            filter: invert(56%) sepia(39%) saturate(834%) hue-rotate(336deg)
+              brightness(95%) contrast(77%);
+            transition: 0.3s;
+          }
+        }
       }
-    }
     }
   }
 `;

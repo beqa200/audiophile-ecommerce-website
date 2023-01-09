@@ -23,10 +23,17 @@ const CartContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    p {
+    .remove {
       opacity: 0.5;
       text-decoration: underline;
       cursor: pointer;
+
+      @media (min-width: 1440px) {
+        &:hover {
+          color: #d87d4a;
+          transition: 0.3s;
+        }
+      }
     }
   }
 
@@ -90,6 +97,16 @@ const CartContainer = styled.div`
           width: 20%;
           line-height: 30px;
           text-align: center;
+        }
+
+        .for-hover {
+          @media (min-width: 1440px) {
+            &:hover {
+              filter: invert(56%) sepia(39%) saturate(834%) hue-rotate(336deg)
+                brightness(95%) contrast(77%);
+              transition: 0.3s;
+            }
+          }
         }
 
         .num {

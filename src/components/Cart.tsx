@@ -22,6 +22,7 @@ export default function Cart() {
           onClick={() => {
             context?.setCartObject([]);
           }}
+          className="remove"
         >
           Remove all
         </p>
@@ -50,6 +51,7 @@ export default function Cart() {
                       context.setCartObject(copied);
                     }
                   }}
+                  className="for-hover"
                 >
                   -
                 </p>
@@ -60,6 +62,7 @@ export default function Cart() {
                     const copied = [...context.cartObject];
                     context.setCartObject(copied);
                   }}
+                  className="for-hover"
                 >
                   +
                 </p>
