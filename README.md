@@ -14,8 +14,8 @@
 ### Prerequisites
 
 - <img src="readme/npm.png" width="25" style="top: 8px" /> _npm @8 and up_
-- <img src="readme/vite.jpg" width="25" style="top: 8px" /> _vite_
-- <img src="readme/typescript.png" width="25" style="top: 8px" /> _typescript_
+- <img src="readme/vite.jpg" width="25" style="top: 8px" /> _vite @4.0.0_
+- <img src="readme/typescript.png" width="25" style="top: 8px" /> _typescript @4.9.3_
 
 #
 
@@ -23,8 +23,8 @@
 
 - <img src="readme/react.png" width="25" style="top: 8px" /> _React @18.2.0 - front-end framework_
 - <img src="readme/styled-components.png" width="25" style="top: 8px" /> _Styled-components @5.3.6 - visual primitives for the component age_
-- <img src="readme/router.png" width="25" style="top: 8px" /> _React Router @6.6.1_
-- <img src="readme/helmet.jpg" width="25" style="top: 8px" /> _React Helmet_
+- <img src="readme/router.png" width="25" style="top: 8px" /> _React Router @6.6.1 - React library for routing_
+- <img src="readme/helmet.jpg" width="25" style="top: 8px" /> _React Helmet @6.1.0 - library for write code in head from JSX_
 
 #
 
