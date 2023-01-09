@@ -24,7 +24,7 @@
 - <img src="readme/react.png" width="25" style="top: 8px" /> _React @18.2.0 - front-end framework_
 - <img src="readme/styled-components.png" width="25" style="top: 8px" /> _Styled-components @5.3.6 - visual primitives for the component age_
 - <img src="readme/router.png" width="25" style="top: 8px" /> _React Router @6.6.1_
-- <img src="readme/helmet.jpg" width="25" style="top: 8px" />_React Helmet_
+- <img src="readme/helmet.jpg" width="25" style="top: 8px" /> _React Helmet_
 
 #
 
@@ -87,4 +87,4 @@ after this you can use this file to deploy project on server.
 
 ### Author
 
-- [LinkedIn](https://www.linkedin.com/in/beqa-maisuradze-76a730234/)
+- [LinkedIn](https://www.linkedin.com/in/beka-maisuradze-76a730234/)
