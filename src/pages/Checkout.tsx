@@ -9,16 +9,16 @@ export default function Checkout() {
   const context = useContext(MyContext);
   const navigate = useNavigate();
 
-  const [name, setName] = useState<any>("");
-  const [email, setEmail] = useState<any>("");
-  const [phone, setPhone] = useState<any>("");
-  const [adress, setAdress] = useState<any>("");
-  const [zip, setZip] = useState<any>("");
-  const [city, setCity] = useState<any>("");
-  const [country, setCountry] = useState<any>("");
-  const [emoneyNumber, setEmoneyNumber] = useState<any>("");
-  const [emoneyPin, setEmoneyPin] = useState<any>("");
-  const [payment, setPayment] = useState<any>("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [adress, setAdress] = useState<string>("");
+  const [zip, setZip] = useState<string>("");
+  const [city, setCity] = useState<string>("");
+  const [country, setCountry] = useState<string>("");
+  const [emoneyNumber, setEmoneyNumber] = useState<string>("");
+  const [emoneyPin, setEmoneyPin] = useState<string>("");
+  const [payment, setPayment] = useState<string>("");
 
   const [nameVal, setNameVal] = useState(false);
   const [emailVal, setEmailVal] = useState(false);
