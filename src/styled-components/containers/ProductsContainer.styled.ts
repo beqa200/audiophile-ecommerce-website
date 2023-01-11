@@ -31,6 +31,7 @@ const ProductsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 8px;
 
     @media (min-width: 1440px) {
       height: 190px;

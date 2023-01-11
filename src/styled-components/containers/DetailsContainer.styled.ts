@@ -234,6 +234,8 @@ const DetailsContainer = styled.div`
 
         img {
           width: 100%;
+        height: calc(50% - 15px);
+
         }
       }
     }
@@ -259,6 +261,7 @@ const DetailsContainer = styled.div`
     }
 
     @media (min-width: 1440px) {
+      height: 570px;
       .tablet {
         display: none;
       }
@@ -278,10 +281,11 @@ const DetailsContainer = styled.div`
 
         div {
           width: 32%;
-
+          
           img {
             width: 100%;
             height: 318px;
+            border-radius: 8px;
           }
         }
       }
