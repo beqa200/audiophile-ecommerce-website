@@ -40,7 +40,6 @@ function App() {
 
       <BrowserRouter>
         <ScrollToTop />
-
         {(menu || cart || submit) && (
           <BlackScreen
             onClick={() => {
@@ -50,16 +49,14 @@ function App() {
             }}
           />
         )}
-
+        ;
         <Header />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path=":category" element={<Category />} />
           <Route path=":category/:product" element={<Details />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
-
         <Footer />
       </BrowserRouter>
     </MyContext.Provider>
